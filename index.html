@@ -74,12 +74,13 @@ tr:hover td{background:#fbf3e2}
 .ok{background:#f1f9f4;border-color:#bfe3cd;border-left-color:var(--green)}
 footer{background:var(--brown);color:#e9ddc8;padding:34px 0;text-align:center;font-size:.93rem}
 footer b{color:var(--gold)}
-/* ---- EDITOR ---- */
+/* ---- EDITOR & PRINT BTN ---- */
 #bar{position:fixed;bottom:0;left:0;right:0;background:#2b2217;color:#fff;padding:9px 14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center;z-index:200;box-shadow:0 -3px 14px rgba(0,0,0,.25)}
 #bar button{font-family:inherit;font-size:.92rem;font-weight:600;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;background:#5a4630;color:#fff;transition:.2s}
 #bar button:hover{background:#7a6240}
 #bar button.main{background:var(--gold);color:#2b2217}
 #bar button.main.live{background:var(--green);color:#fff}
+#bar button.print-btn{background:var(--blue);color:#fff}
 #bar .st{font-size:.85rem;opacity:.8;margin-left:6px}
 body.edit [data-edit]{outline:2px dashed var(--gold);outline-offset:6px;border-radius:8px;background:#fffdf6}
 body.edit [data-edit]:focus{outline:2px solid var(--green);background:#fff}
@@ -405,10 +406,10 @@ body.edit .addbtn{display:inline-block}
 
 <div id="bar">
   <button id="tgl" class="main">✎ เปิดโหมดแก้ไข</button>
+  <button class="print-btn" onclick="window.print()">🖨 พิมพ์เว็บไซต์</button>
   <button onclick="expJSON()">⬇ สำรองข้อมูล</button>
   <button onclick="document.getElementById('file').click()">⬆ กู้คืนข้อมูล</button>
   <button onclick="dlHTML()">💾 ดาวน์โหลดเว็บไซต์</button>
-  <button onclick="window.print()">🖨 พิมพ์</button>
   <button onclick="resetAll()">↺ ค่าเริ่มต้น</button>
   <span class="st" id="st"></span>
   <input type="file" id="file" accept=".json" hidden>
@@ -419,7 +420,7 @@ body.edit .addbtn{display:inline-block}
 <div id="toast"></div>
 
 <script>
-const KEY='csz_school_v4';
+const KEY='csz_school_v5';
 const DIM={1:{n:"มิติที่ 1 สุขภาพ",c:"d1",h:40},2:{n:"มิติที่ 2 สังคม จิตใจ และภูมิปัญญา",c:"d2",h:28},3:{n:"มิติที่ 3 เศรษฐกิจและความมั่นคง",c:"d3",h:28},4:{n:"มิติที่ 4 สภาพแวดล้อมและความปลอดภัย",c:"d4",h:20},5:{n:"มิติที่ 5 เทคโนโลยีและนวัตกรรม",c:"d5",h:16}};
 
 const DEF_COURSES=[
@@ -518,6 +519,7 @@ const DEF_COMM=[
 {grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"พระเสาร์คำ ธรรมะนันโท (เจ้าอาวาส)",org:"วัดศรีหลวงแจ้ซ้อน",role:"ให้คำปรึกษาด้านธรรมะ สถาน และจิตใจ"},
 {grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายบุญมา ไชยเมืองชื่น",org:"องค์การบริหารส่วนตำบลแจ้ซ้อน",role:"นายกองค์การบริหารส่วนตำบลแจ้ซ้อน / ที่ปรึกษาบริหาร"},
 {grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายสุทธิพล ต๊ะเวที",org:"ฝ่ายปกครองตำบลแจ้ซ้อน",role:"กำนันตำบลแจ้ซ้อน / ที่ปรึกษาด้านความมั่นคงและชุมชน"},
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายประสิทธิ์ อิ่มปัญญา",org:"รพ.สต.บ้านแจ้ซ้อนเหนือ",role:"ผอ.รพ.สต.บ้านแจ้ซ้อนเหนือ / ที่ปรึกษาด้านสุขภาพและสาธารณสุข"},
 {grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายยุทธ เตวิชัย",org:"หมู่ที่ 5 ตำบลแจ้ซ้อน",role:"ผู้ใหญ่บ้านหมู่ที่ 5 / ที่ปรึกษาประสานงานพื้นที่"},
 {grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายชาติ อภิรักษ์วงศ์",org:"หมู่ที่ 12 ตำบลแจ้ซ้อน",role:"ผู้ใหญ่บ้านหมู่ที่ 12 / ที่ปรึกษาประสานงานพื้นที่"}];
 
