@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน | วัดศรีหลวงแจ้ซ้อน อ.เมืองปาน จ.ลำปาง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+<script id="preload" type="application/json">null</script>
+<style>
+:root{--gold:#c8911b;--gold-d:#9a6c0c;--brown:#4a3420;--cream:#fdf8ee;--green:#2e7d5b;--red:#b5432f;--blue:#2a6496;--purple:#6b4a8a;--ink:#2b2217;--line:#e4d7bf}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--ink);font-size:18px;line-height:1.85;padding-bottom:70px}
+a{color:var(--gold-d)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+header{background:linear-gradient(135deg,#4a3420 0%,#6b4a26 55%,#9a6c0c 100%);color:#fff;padding:44px 0 34px;text-align:center;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 14px,transparent 14px 28px)}
+header .wrap{position:relative;z-index:2}
+.logo{font-size:52px;line-height:1}
+header h1{font-size:2.15rem;font-weight:800;margin:10px 0 4px}
+header h2{font-size:1.1rem;font-weight:400;opacity:.95}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:7px 18px;border-radius:30px;margin-top:16px;font-size:.95rem}
+nav{background:#fff;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:50;box-shadow:0 3px 14px rgba(0,0,0,.07)}
+nav .wrap{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+nav button{font-family:inherit;font-size:1.02rem;font-weight:600;background:none;border:none;padding:16px 16px;cursor:pointer;color:var(--brown);border-bottom:4px solid transparent;transition:.2s}
+nav button:hover{background:#fbf3e2}
+nav button.on{color:var(--gold-d);border-bottom-color:var(--gold);background:#fbf3e2}
+section{display:none;padding:40px 0 60px;animation:fade .35s}
+section.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h3.title{font-size:1.75rem;color:var(--brown);border-left:7px solid var(--gold);padding-left:14px;margin:34px 0 18px}
+h3.title:first-child{margin-top:0}
+h4{font-size:1.2rem;color:var(--gold-d);margin:22px 0 8px}
+p{margin-bottom:14px}
+ul,ol{margin:0 0 14px 26px}
+li{margin-bottom:6px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-bottom:22px;box-shadow:0 2px 10px rgba(74,52,32,.06)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.stat{background:#fff;border-top:6px solid var(--gold);border-radius:12px;padding:22px 16px;text-align:center;box-shadow:0 2px 10px rgba(74,52,32,.07)}
+.stat b{display:block;font-size:2.1rem;color:var(--gold-d);font-weight:800;line-height:1.2}
+.stat span{font-size:.95rem;color:#6b5a44}
+table{width:100%;border-collapse:collapse;background:#fff;margin-bottom:12px;font-size:.97rem;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(74,52,32,.06)}
+th{background:var(--brown);color:#fff;padding:13px 12px;text-align:left;font-weight:600}
+td{padding:11px 12px;border-bottom:1px solid #f0e6d4;vertical-align:top}
+tr:nth-child(even) td{background:#fdfaf3}
+tr:hover td{background:#fbf3e2}
+.pill{display:inline-block;padding:3px 12px;border-radius:20px;font-size:.82rem;font-weight:600;color:#fff;white-space:nowrap}
+.d1{background:var(--red)}.d2{background:var(--purple)}.d3{background:var(--green)}.d4{background:var(--blue)}.d5{background:#b87333}.d0{background:#7a6a55}
+.acc{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;overflow:hidden;box-shadow:0 1px 6px rgba(74,52,32,.05)}
+.acc-h{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;font-weight:600;transition:.2s}
+.acc-h:hover{background:#fbf3e2}
+.acc-h .code{font-family:monospace;font-size:.92rem;background:#f3e8d0;padding:4px 10px;border-radius:6px;color:var(--brown);font-weight:700}
+.acc-h .nm{flex:1;font-size:1.08rem}
+.acc-h .hr{font-size:.9rem;color:#8a7861}
+.acc-h .ar{transition:.25s;color:var(--gold)}
+.acc.open .acc-h .ar{transform:rotate(90deg)}
+.acc-b{display:none;padding:4px 24px 24px;border-top:1px dashed var(--line)}
+.acc.open .acc-b{display:block}
+.lbl{font-weight:700;color:var(--gold-d);margin-top:16px;margin-bottom:4px;font-size:1.02rem}
+.aai{background:#f4faf6;border-left:5px solid var(--green);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:16px;font-size:.95rem}
+.cal-month{font-size:1.25rem;font-weight:800;color:#fff;background:var(--brown);padding:10px 20px;border-radius:10px;margin:26px 0 14px}
+.sess{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-left:7px solid var(--gold);border-radius:10px;padding:14px 18px;margin-bottom:10px;align-items:flex-start}
+.sess.break{border-left-color:#c0b5a2;background:#f6f2ea;opacity:.9}
+.sess.sp{border-left-color:var(--green);background:#f4faf6}
+.sess .no{min-width:62px;text-align:center;background:#f3e8d0;border-radius:8px;padding:6px 4px;font-weight:800;color:var(--brown);font-size:.85rem}
+.sess .dt{min-width:132px;font-weight:700;color:var(--gold-d)}
+.sess .ct{flex:1}
+.sess .ct small{color:#7a6a55;display:block}
+.note{background:#fff8e6;border:1px solid #f0d9a0;border-left:6px solid var(--gold);padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:20px}
+.warn{background:#fdf1ee;border-color:#f0c3b8;border-left-color:var(--red)}
+.ok{background:#f1f9f4;border-color:#bfe3cd;border-left-color:var(--green)}
+footer{background:var(--brown);color:#e9ddc8;padding:34px 0;text-align:center;font-size:.93rem}
+footer b{color:var(--gold)}
+/* ---- EDITOR ---- */
+#bar{position:fixed;bottom:0;left:0;right:0;background:#2b2217;color:#fff;padding:9px 14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center;z-index:200;box-shadow:0 -3px 14px rgba(0,0,0,.25)}
+#bar button{font-family:inherit;font-size:.92rem;font-weight:600;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;background:#5a4630;color:#fff;transition:.2s}
+#bar button:hover{background:#7a6240}
+#bar button.main{background:var(--gold);color:#2b2217}
+#bar button.main.live{background:var(--green);color:#fff}
+#bar .st{font-size:.85rem;opacity:.8;margin-left:6px}
+body.edit [data-edit]{outline:2px dashed var(--gold);outline-offset:6px;border-radius:8px;background:#fffdf6}
+body.edit [data-edit]:focus{outline:2px solid var(--green);background:#fff}
+.tools{display:none;gap:6px;margin-left:auto}
+body.edit .tools{display:flex}
+.tools button,.addbtn{font-family:inherit;font-size:.82rem;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--brown);border-radius:7px;padding:4px 10px;cursor:pointer}
+.tools button:hover,.addbtn:hover{background:#f3e8d0}
+.addbtn{display:none;margin:4px 0 22px;background:var(--green);color:#fff;border:none;padding:9px 18px;font-size:.95rem;border-radius:9px}
+body.edit .addbtn{display:inline-block}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;overflow:auto;padding:30px 14px}
+#modal.on{display:block}
+.mbox{max-width:760px;margin:0 auto;background:#fff;border-radius:14px;padding:26px 28px}
+.mbox h3{color:var(--brown);margin-bottom:14px}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-weight:700;color:var(--gold-d);margin-bottom:4px;font-size:.95rem}
+.fld input,.fld textarea,.fld select{width:100%;font-family:inherit;font-size:1rem;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fdfaf3}
+.fld textarea{min-height:110px;resize:vertical}
+.fld small{color:#8a7861;font-size:.82rem}
+.mact{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+.mact button{font-family:inherit;font-size:1rem;font-weight:700;border:none;border-radius:9px;padding:10px 22px;cursor:pointer}
+.mact .sv{background:var(--green);color:#fff}
+.mact .cc{background:#e8e0d2;color:var(--brown)}
+#toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:11px 24px;border-radius:30px;font-weight:600;z-index:400;opacity:0;transition:.3s;pointer-events:none}
+#toast.on{opacity:1}
+@media(max-width:700px){body{font-size:17px}header h1{font-size:1.45rem}nav button{padding:12px 10px;font-size:.92rem}.sess{flex-direction:column;gap:6px}.sess .dt{min-width:auto}table{font-size:.88rem}th,td{padding:9px 7px}#bar button{font-size:.82rem;padding:7px 10px}}
+@media print{nav,footer,#bar,.tools,.addbtn{display:none!important}section{display:block!important}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="logo">🏯</div>
+  <h1 data-edit="h-title">โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน</h1>
+  <h2 data-edit="h-sub">วัดศรีหลวงแจ้ซ้อน ตำบลแจ้ซ้อน อำเภอเมืองปาน จังหวัดลำปาง</h2>
+  <div class="badge" data-edit="h-badge">เปิดเรียนทุกวันพุธ · เริ่ม 21 ตุลาคม 2569 · รุ่นที่ 1</div>
+</div></header>
+
+<nav><div class="wrap">
+  <button class="on" data-t="home">หน้าแรก</button>
+  <button data-t="curri">หลักสูตร 5 มิติ</button>
+  <button data-t="subj">รายวิชาและเนื้อหา</button>
+  <button data-t="cal">ปฏิทินการเรียน</button>
+  <button data-t="comm">คณะกรรมการ</button>
+  <button data-t="aai">การวัดผล AAI</button>
+  <button data-t="res">แผนประสานทรัพยากร</button>
+  <button data-t="net">ภาคีเครือข่าย</button>
+</div></nav>
+
+<!-- ======= หน้าแรก ======= -->
+<section id="home" class="on"><div class="wrap">
+  <h3 class="title">ปรัชญาโรงเรียน</h3>
+  <div class="card" data-edit="motto" style="text-align:center;font-size:1.4rem;font-weight:800;color:var(--brown);background:linear-gradient(135deg,#fffdf7,#faf0d9)">
+    “สูงวัยอย่างมีพลัง เรียนรู้ตลอดชีวิต<br>พึ่งพาตนเองได้ เป็นหลักชัยของชุมชน”
+  </div>
+  <div class="grid g4" style="margin-bottom:26px">
+    <div class="stat"><b>36</b><span>ครั้ง/ปีการศึกษา</span></div>
+    <div class="stat"><b>144</b><span>ชั่วโมงเรียน</span></div>
+    <div class="stat"><b>25</b><span>รายวิชา</span></div>
+    <div class="stat"><b>5</b><span>มิติผู้สูงอายุ</span></div>
+  </div>
+
+  <h3 class="title">หลักการและเหตุผล</h3>
+  <div class="card" data-edit="rationale">
+    <p>ตำบลแจ้ซ้อนเป็นพื้นที่กึ่งชนบทเชิงเขาในเขตอำเภอเมืองปาน มีทุนทางวัฒนธรรมล้านนา ฐานเกษตรกรรม และแหล่งท่องเที่ยวธรรมชาติที่โดดเด่น ขณะเดียวกันโครงสร้างประชากรกำลังเปลี่ยนเข้าสู่สังคมสูงวัยอย่างสมบูรณ์ ผู้สูงอายุจำนวนมากอยู่ลำพังเพราะบุตรหลานย้ายถิ่นไปทำงานต่างจังหวัด ส่งผลให้เกิดความเสี่ยงต่อภาวะติดบ้าน ซึมเศร้า สมองเสื่อม และการพลัดตกหกล้ม</p>
+    <p>กรมกิจการผู้สูงอายุกำหนดแนวทางพัฒนาศักยภาพผู้สูงอายุในชุมชนให้ครอบคลุมมิติสุขภาพ สังคม เศรษฐกิจ สภาพแวดล้อม และเทคโนโลยีนวัตกรรม ขณะที่สำนักงานสถิติแห่งชาติได้จัดทำ <b>ดัชนีพฤฒพลังผู้สูงอายุไทย (Active Ageing Index — AAI)</b> ประกอบด้วยดัชนีย่อยด้านสุขภาพ ด้านการมีส่วนร่วม ด้านความมั่นคงปลอดภัย และด้านสภาพแวดล้อมที่เอื้อต่อพฤฒพลัง</p>
+    <p>หลักสูตรนี้จึงออกแบบให้ <b>“เรียนแล้ววัดผลได้”</b> โดยผูกทุกรายวิชาเข้ากับตัวชี้วัด AAI เพื่อให้โรงเรียนผู้สูงอายุไม่ใช่เพียงกิจกรรมนันทนาการ แต่เป็นกลไกยกระดับพฤฒพลังของตำบลอย่างเป็นระบบ โดยใช้วัดศรีหลวงแจ้ซ้อนเป็นศูนย์กลางตามหลัก “บวร” (บ้าน–วัด–โรงเรียน/ราชการ)</p>
+  </div>
+
+  <h3 class="title">เป้าหมายผลลัพธ์ภายใน 1 ปีการศึกษา</h3>
+  <div data-edit="goals"><table>
+    <tr><th style="width:34%">เป้าหมาย</th><th>ตัวชี้วัดความสำเร็จ</th></tr>
+    <tr><td>สุขภาพกายดีขึ้น</td><td>นักเรียนมีผลทดสอบการทรงตัว Timed Up and Go ดีขึ้น ไม่น้อยกว่าร้อยละ 70</td></tr>
+    <tr><td>สุขภาพจิตดีขึ้น</td><td>ผู้ที่มีคะแนนเสี่ยงซึมเศร้า 2Q/9Q ลดลง ไม่น้อยกว่าร้อยละ 60</td></tr>
+    <tr><td>มีส่วนร่วมทางสังคม</td><td>เข้าร่วมกิจกรรมชมรม หมู่บ้าน หรือศาสนา ไม่น้อยกว่าร้อยละ 80 ของนักเรียน</td></tr>
+    <tr><td>มีรายได้เสริม</td><td>เกิดกลุ่มอาชีพผู้สูงอายุอย่างน้อย 3 กลุ่ม และมีผู้มีรายได้เสริมร้อยละ 40</td></tr>
+    <tr><td>สภาพแวดล้อมปลอดภัย</td><td>บ้านผู้สูงอายุกลุ่มเสี่ยงได้รับการปรับสภาพอย่างน้อย 20 หลัง</td></tr>
+    <tr><td>รู้เท่าทันเทคโนโลยี</td><td>ใช้สมาร์ตโฟนติดต่อสื่อสารและใช้บริการภาครัฐพื้นฐานได้เอง ร้อยละ 70</td></tr>
+    <tr><td>ค่าพฤฒพลังระดับตำบล</td><td>ค่าดัชนี AAI ระดับตำบลสูงขึ้นจากค่าฐาน ไม่น้อยกว่าร้อยละ 15 ภายในปี 2570</td></tr>
+  </table></div>
+
+  <h3 class="title">คุณสมบัติผู้เรียน</h3>
+  <div class="grid g2" data-edit="students">
+    <div class="card"><h4>กลุ่มเรียนประจำ (ติดสังคม)</h4><ul>
+      <li>อายุ 55 ปีขึ้นไป มีภูมิลำเนาในตำบลแจ้ซ้อน</li>
+      <li>ช่วยเหลือตนเองในชีวิตประจำวันได้</li>
+      <li>เดินทางมาวัดศรีหลวงแจ้ซ้อนได้ด้วยตนเองหรือมีผู้นำส่ง</li>
+      <li>สมัครใจและเข้าเรียนได้ไม่น้อยกว่าร้อยละ 70 ของเวลาเรียน</li>
+      <li>รับรุ่นละ 60–80 คน</li></ul></div>
+    <div class="card"><h4>กลุ่มห้องเรียนเคลื่อนที่ (ติดบ้าน/ติดเตียง)</h4><ul>
+      <li>จัดหลักสูตรคู่ขนานแบบย่อ เน้นมิติสุขภาพและสภาพแวดล้อม</li>
+      <li>ทีม อสม. / อพม. / Caregiver เยี่ยมบ้านเดือนละ 2 ครั้ง</li>
+      <li>ถ่ายทอดบทเรียนผ่านคลิปสั้นในกลุ่ม LINE ของลูกหลาน</li>
+      <li>นักเรียนกลุ่มติดสังคมทำหน้าที่ “เพื่อนเยี่ยมเพื่อน”</li></ul></div>
+  </div>
+
+  <h3 class="title">ตารางกิจกรรมประจำวันพุธ</h3>
+  <div data-edit="daily"><table>
+    <tr><th style="width:20%">เวลา</th><th>กิจกรรม</th></tr>
+    <tr><td>08.30–09.00</td><td>ลงทะเบียน วัดความดันโลหิต ชั่งน้ำหนัก โดยทีม อสม.</td></tr>
+    <tr><td>09.00–09.30</td><td>สวดมนต์ ไหว้พระ นั่งสมาธิ และออกกำลังกายยืดเหยียด</td></tr>
+    <tr><td>09.30–11.30</td><td><b>คาบเรียนหลัก</b> (ทฤษฎีสลับปฏิบัติ) 2 ชั่วโมง</td></tr>
+    <tr><td>11.30–12.30</td><td>รับประทานอาหารกลางวันร่วมกัน (เมนูสุขภาพหมุนเวียนรายหมู่บ้าน)</td></tr>
+    <tr><td>12.30–14.30</td><td><b>คาบปฏิบัติ / ฐานกิจกรรม</b> 2 ชั่วโมง</td></tr>
+    <tr><td>14.30–15.00</td><td>สรุปบทเรียน AAR มอบการบ้านกลับบ้าน แยกย้าย</td></tr>
+  </table></div>
+  <div class="note ok"><b>รวมเวลาเรียน:</b> 36 ครั้ง × 4 ชั่วโมง = 144 ชั่วโมง (วิชาการ 132 ชม. + กิจกรรมพิเศษ 12 ชม.) และกิจกรรมประจำวันช่วงเช้าอีก 36 ชั่วโมง</div>
+</div></section>
+
+<!-- ======= หลักสูตร ======= -->
+<section id="curri"><div class="wrap">
+  <h3 class="title">โครงสร้างหลักสูตร 5 มิติ</h3>
+  <div data-edit="struct"><table>
+    <tr><th>มิติ</th><th style="width:12%">ชั่วโมง</th><th style="width:12%">รายวิชา</th><th style="width:12%">สัดส่วน</th></tr>
+    <tr><td><span class="pill d1">มิติ 1</span> สุขภาพ</td><td>40</td><td>7</td><td>30.3%</td></tr>
+    <tr><td><span class="pill d2">มิติ 2</span> สังคม จิตใจ และภูมิปัญญา</td><td>28</td><td>5</td><td>21.2%</td></tr>
+    <tr><td><span class="pill d3">มิติ 3</span> เศรษฐกิจและความมั่นคง</td><td>28</td><td>5</td><td>21.2%</td></tr>
+    <tr><td><span class="pill d4">มิติ 4</span> สภาพแวดล้อมและความปลอดภัย</td><td>20</td><td>4</td><td>15.2%</td></tr>
+    <tr><td><span class="pill d5">มิติ 5</span> เทคโนโลยีและนวัตกรรม</td><td>16</td><td>4</td><td>12.1%</td></tr>
+    <tr style="font-weight:800"><td>รวมวิชาการ</td><td>132</td><td>25</td><td>100%</td></tr>
+    <tr><td><span class="pill d0">พิเศษ</span> กิจกรรมพัฒนาผู้เรียน</td><td>12</td><td>3 ครั้ง</td><td>—</td></tr>
+  </table></div>
+
+  <h3 class="title">ผังความเชื่อมโยง 5 มิติ กับดัชนี AAI</h3>
+  <div data-edit="map"><table>
+    <tr><th style="width:24%">มิติหลักสูตร</th><th style="width:26%">ดัชนีย่อย AAI ที่รองรับ</th><th>ตัวชี้วัดที่คาดว่าจะขยับ</th></tr>
+    <tr><td><span class="pill d1">1</span> สุขภาพ</td><td>ด้านสุขภาพ</td><td>การประเมินสุขภาพตนเอง · การออกกำลังกายสม่ำเสมอ · ไม่สูบบุหรี่/ไม่ดื่มสุรา · ความสามารถทำกิจวัตรประจำวัน (ADL) · สุขภาพจิต</td></tr>
+    <tr><td><span class="pill d2">2</span> สังคม จิตใจ ภูมิปัญญา</td><td>ด้านการมีส่วนร่วม</td><td>การเข้าร่วมชมรมผู้สูงอายุ · กิจกรรมหมู่บ้านและศาสนา · การช่วยเหลือเกื้อกูลครอบครัวและชุมชน · การถ่ายทอดภูมิปัญญา</td></tr>
+    <tr><td><span class="pill d3">3</span> เศรษฐกิจและความมั่นคง</td><td>ด้านการมีส่วนร่วม + ความมั่นคงปลอดภัย</td><td>การมีงานทำและรายได้ · การมีเงินออม · การมีหลักประกันรายได้ยามชรา · การเข้าถึงสิทธิสวัสดิการ</td></tr>
+    <tr><td><span class="pill d4">4</span> สภาพแวดล้อมและความปลอดภัย</td><td>ด้านความมั่นคงปลอดภัย + สภาพแวดล้อมที่เอื้อ</td><td>ที่อยู่อาศัยปลอดภัย · การเข้าถึงบริการสาธารณสุข · ความปลอดภัยในชีวิตและทรัพย์สิน · คุณภาพอากาศ</td></tr>
+    <tr><td><span class="pill d5">5</span> เทคโนโลยีและนวัตกรรม</td><td>ด้านสภาพแวดล้อมที่เอื้อต่อพฤฒพลัง</td><td>การเข้าถึงข้อมูลข่าวสาร · การใช้อินเทอร์เน็ต · การเรียนรู้ตลอดชีวิต · การรู้เท่าทันภัยไซเบอร์</td></tr>
+  </table></div>
+
+  <h3 class="title">รูปแบบการจัดการเรียนรู้</h3>
+  <div class="card" data-edit="pedagogy">
+    <p>ยึดหลัก <b>“เรียนน้อย รู้มาก ลงมือทำจริง”</b> ด้วยกระบวนการดังนี้</p>
+    <ul>
+      <li><b>Active Learning</b> — เน้นภาคปฏิบัติไม่น้อยกว่าร้อยละ 60 ของเวลาเรียน ไม่บรรยายต่อเนื่องเกิน 30 นาทีต่อช่วง</li>
+      <li><b>ใช้ภาษาถิ่น (คำเมือง)</b> เป็นสื่อหลัก ประกอบสื่อภาพตัวอักษรใหญ่ เสียงดังชัด มีไมโครโฟนและลำโพงช่วย</li>
+      <li><b>Peer Learning</b> — จับคู่ “เพื่อนช่วยเพื่อน” โดยเฉพาะวิชามิติเทคโนโลยี</li>
+      <li><b>ถอดบทเรียนภูมิปัญญา</b> — ผู้สูงอายุสลับบทบาทเป็น “ครู” และ “นักเรียน” เพื่อสร้างคุณค่าในตนเอง</li>
+      <li><b>เชื่อมบ้าน–วัด–โรงเรียน (บวร)</b> — ใช้วัดศรีหลวงแจ้ซ้อนเป็นศูนย์กลาง มีการบ้านนำกลับไปปฏิบัติกับครอบครัว</li>
+      <li><b>โครงงานชุมชน</b> — แบ่งกลุ่มทำโครงงาน 1 เรื่องตลอดปี นำเสนอในวันปัจฉิมนิเทศ</li>
+    </ul>
+  </div>
+
+  <h3 class="title">กิจกรรมพัฒนาผู้เรียน</h3>
+  <div class="grid g3" data-edit="activities">
+    <div class="card"><h4>🎓 ปฐมนิเทศและรับขวัญ</h4><p>พิธีเปิดเรียน ไหว้ครู และสืบชะตาแบบล้านนา พร้อมประเมินฐาน AAI ครั้งที่ 1</p></div>
+    <div class="card"><h4>🚌 ทัศนศึกษาแลกเปลี่ยน</h4><p>ศึกษาดูงานโรงเรียนผู้สูงอายุต้นแบบต่างตำบล 1 ครั้งต่อปี</p></div>
+    <div class="card"><h4>🛍️ ตลาดนัดผลิตภัณฑ์</h4><p>จำหน่ายผลงานนักเรียน บูรณาการกับวิชา ศก 303 และงานประเพณีของตำบล</p></div>
+    <div class="card"><h4>🤝 จิตอาสาเยี่ยมเพื่อน</h4><p>นักเรียนลงเยี่ยมผู้สูงอายุติดบ้านติดเตียง เดือนละ 1 ครั้ง นับเป็นชั่วโมงจิตอาสา</p></div>
+    <div class="card"><h4>🏅 ปัจฉิมนิเทศ</h4><p>นำเสนอโครงงานชุมชน ประเมิน AAI ครั้งที่ 2 มอบวุฒิบัตร และเชิดชูเกียรติ “ผู้สูงวัยพฤฒพลังดีเด่น”</p></div>
+    <div class="card"><h4>💧 รดน้ำดำหัวปี๋ใหม่เมือง</h4><p>กิจกรรมสานสัมพันธ์สามวัยร่วมกับเยาวชนในพื้นที่ช่วงเทศกาลสงกรานต์</p></div>
+  </div>
+</div></section>
+
+<!-- ======= รายวิชา ======= -->
+<section id="subj"><div class="wrap">
+  <h3 class="title">รายวิชาและเนื้อหาการสอน</h3>
+  <div class="note">คลิกที่ชื่อวิชาเพื่อดูวัตถุประสงค์ เนื้อหา กิจกรรม สื่อ วิทยากร และตัวชี้วัด AAI ที่เชื่อมโยง · เปิดโหมดแก้ไขเพื่อเพิ่มหรือปรับรายวิชา</div>
+  <button class="addbtn" onclick="openForm('course',-1)">+ เพิ่มรายวิชาใหม่</button>
+  <div id="courseList"></div>
+</div></section>
+
+<!-- ======= ปฏิทิน ======= -->
+<section id="cal"><div class="wrap">
+  <h3 class="title">ปฏิทินการเรียนการสอน ปีการศึกษา 2569–2570</h3>
+  <div class="note" data-edit="calnote"><b>เปิดเรียนทุกวันพุธ</b> เวลา 08.30–15.00 น. ณ ศาลาการเปรียญ วัดศรีหลวงแจ้ซ้อน · เริ่มครั้งแรก <b>วันพุธที่ 21 ตุลาคม 2569</b> · จบหลักสูตร <b>วันพุธที่ 28 กรกฎาคม 2570</b> · รวม 36 ครั้ง</div>
+  <div class="note warn"><b>หมายเหตุ:</b> วันหยุดตามเทศกาลและวันสำคัญทางศาสนาอาจคลาดเคลื่อนตามประกาศปฏิทินทางการของแต่ละปี ให้คณะกรรมการบริหารโรงเรียนตรวจสอบและประกาศยืนยันล่วงหน้าอย่างน้อย 2 สัปดาห์</div>
+  <button class="addbtn" onclick="openForm('cal',-1)">+ เพิ่มครั้งเรียน / วันหยุด</button>
+  <div id="calList"></div>
+
+  <h3 class="title">สรุปการกระจายเนื้อหารายไตรมาส</h3>
+  <div data-edit="calsum"><table>
+    <tr><th>ช่วงเวลา</th><th>ครั้งที่</th><th>มิติที่จัดการเรียนรู้</th><th>เหตุผลเชิงบริบท</th></tr>
+    <tr><td>ต.ค. 69 – ม.ค. 70</td><td>1–11</td><td><span class="pill d1">มิติ 1 สุขภาพ</span></td><td>ช่วงอากาศเย็น เหมาะกับการออกกำลังกายกลางแจ้งและตรวจคัดกรองสุขภาพประจำปี</td></tr>
+    <tr><td>ม.ค. – มี.ค. 70</td><td>12–18</td><td><span class="pill d2">มิติ 2 สังคมและภูมิปัญญา</span></td><td>ต่อเนื่องจากเทศกาลปีใหม่ เป็นช่วงที่ชุมชนมีงานบุญและกิจกรรมวัดมาก</td></tr>
+    <tr><td>มี.ค. – เม.ย. 70</td><td>19–24</td><td><span class="pill d4">มิติ 4 สภาพแวดล้อม</span></td><td>ตรงกับฤดูหมอกควันและไฟป่าภาคเหนือ สอนเรื่อง PM2.5 ได้ทันสถานการณ์จริง</td></tr>
+    <tr><td>เม.ย. – มิ.ย. 70</td><td>25–31</td><td><span class="pill d3">มิติ 3 เศรษฐกิจ</span></td><td>ช่วงเริ่มฤดูฝน เหมาะกับการลงแปลงเกษตรและเพาะปลูกจริง</td></tr>
+    <tr><td>มิ.ย. – ก.ค. 70</td><td>32–36</td><td><span class="pill d5">มิติ 5 เทคโนโลยี</span></td><td>เรียนในร่มช่วงฤดูฝน ใช้เวลาฝึกปฏิบัติกับอุปกรณ์เป็นหลัก</td></tr>
+  </table></div>
+</div></section>
+
+<!-- ======= คณะกรรมการ ======= -->
+<section id="comm"><div class="wrap">
+  <h3 class="title">คณะกรรมการโรงเรียนผู้สูงอายุและที่ปรึกษา</h3>
+  <div class="note" data-edit="commnote">
+    รายชื่อคณะกรรมการบริหารและที่ปรึกษาโรงเรียนผู้สูงอายุตำบลแจ้ซ้อน ประจำปีการศึกษา 2569–2570 ตามประกาศแต่งตั้งอย่างเป็นทางการ
+  </div>
+  <button class="addbtn" onclick="openForm('comm',-1)">+ เพิ่มรายชื่อกรรมการ</button>
+  <div id="commList"></div>
+
+  <h3 class="title">บทบาทหน้าที่ของคณะกรรมการ</h3>
+  <div class="card" data-edit="commrole">
+    <h4>คณะกรรมการที่ปรึกษา</h4>
+    <ul>
+      <li>ให้คำปรึกษาเชิงนโยบาย สนับสนุนทรัพยากร และเชื่อมประสานกับหน่วยงานระดับอำเภอและจังหวัด</li>
+      <li>ร่วมเป็นเกียรติในพิธีเปิด–ปิด และกิจกรรมสำคัญของโรงเรียน</li>
+      <li>ช่วยผลักดันให้โรงเรียนผู้สูงอายุบรรจุอยู่ในแผนพัฒนาท้องถิ่นเพื่อความต่อเนื่อง</li>
+    </ul>
+    <h4>คณะกรรมการบริหารและฝ่ายงานต่างๆ</h4>
+    <ul>
+      <li><b>ครูใหญ่และผู้ช่วยครูใหญ่</b> — ควบคุมดูแลการเรียนการสอนประจำวันและระเบียบวินัย</li>
+      <li><b>ฝ่ายวิชาการและเลขานุการ</b> — จัดทำแผนการสอน ประสานวิทยากร และงานธุรการ</li>
+      <li><b>ฝ่ายเหรัญญิก</b> — ดูแลกองบุญอาหารกลางวันและเงินนอกงบประมาณอย่างโปร่งใส</li>
+      <li><b>ฝ่ายอาคารสถานที่ / ประชาสัมพันธ์ / ปฏิคม / บันทึกภาพ / วัฒนธรรม / แสงเสียง</b> — ปฏิบัติงานสนับสนุนขับเคลื่อนกิจกรรมทุกมิติ</li>
+      <li><b>คณะกรรมการนักเรียน (ประธาน / รองประธาน)</b> — เป็นสะพานเชื่อมระหว่างนักเรียนและผู้บริหาร</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- ======= AAI ======= -->
+<section id="aai"><div class="wrap">
+  <h3 class="title">การวัดและประเมินผลระดับผู้เรียน</h3>
+  <div data-edit="aai1"><table>
+    <tr><th>องค์ประกอบ</th><th style="width:14%">น้ำหนัก</th><th>เครื่องมือ</th></tr>
+    <tr><td>เวลาเรียน</td><td>30%</td><td>บัญชีลงเวลาเรียน (ไม่น้อยกว่าร้อยละ 70 ของเวลาเรียน หรือ 26 ครั้งจาก 36 ครั้ง)</td></tr>
+    <tr><td>การมีส่วนร่วมและพฤติกรรม</td><td>30%</td><td>แบบสังเกตพฤติกรรมของครูประจำชั้น ประเมินทุกเดือน</td></tr>
+    <tr><td>ผลงานและชิ้นงานรายมิติ</td><td>20%</td><td>แฟ้มสะสมผลงาน (Portfolio) อย่างน้อยมิติละ 1 ชิ้น</td></tr>
+    <tr><td>โครงงานชุมชนกลุ่ม</td><td>20%</td><td>แบบประเมินกระบวนการทำงานและการนำเสนอ</td></tr>
+  </table></div>
+
+  <h3 class="title">เครื่องมือประเมินตามดัชนี AAI</h3>
+  <div data-edit="aai2"><table>
+    <tr><th>ด้าน</th><th>เครื่องมือ</th><th style="width:22%">ความถี่</th></tr>
+    <tr><td><span class="pill d1">สุขภาพกาย</span></td><td>ดัชนีบาร์เธล (ADL), Timed Up and Go test, ดัชนีมวลกาย, รอบเอว, ความดันโลหิต, น้ำตาลปลายนิ้ว</td><td>ครั้งที่ 1, 19, 36</td></tr>
+    <tr><td><span class="pill d1">สุขภาพจิตและสมอง</span></td><td>แบบคัดกรอง 2Q/9Q, แบบวัดความสุขคนไทย TMHI-15, แบบทดสอบสมรรถภาพสมอง MMSE-Thai หรือ AMT</td><td>ครั้งที่ 1 และ 36</td></tr>
+    <tr><td><span class="pill d2">การมีส่วนร่วม</span></td><td>บันทึกการเข้าร่วมกิจกรรมชมรม หมู่บ้าน ศาสนา และชั่วโมงจิตอาสาสะสม</td><td>บันทึกรายเดือน</td></tr>
+    <tr><td><span class="pill d3">เศรษฐกิจ</span></td><td>แบบสำรวจรายได้เสริมและเงินออม, สมุดบัญชีครัวเรือน, การเข้าถึงสิทธิสวัสดิการ</td><td>ครั้งที่ 1 และ 36</td></tr>
+    <tr><td><span class="pill d4">สภาพแวดล้อม</span></td><td>แบบสำรวจจุดเสี่ยงในบ้าน (Home Safety Checklist) และแบบประเมินความปลอดภัยในชุมชน</td><td>ครั้งที่ 1 และ 36</td></tr>
+    <tr><td><span class="pill d5">เทคโนโลยี</span></td><td>แบบทดสอบทักษะดิจิทัลพื้นฐานแบบปฏิบัติจริง 10 รายการ</td><td>ครั้งที่ 1 และ 36</td></tr>
+  </table></div>
+
+  <h3 class="title">เกณฑ์สำเร็จการศึกษา</h3>
+  <div class="card ok note" data-edit="grad">
+    <ol>
+      <li>มีเวลาเรียนไม่น้อยกว่าร้อยละ 70 ของเวลาเรียนทั้งหมด</li>
+      <li>มีผลงานในแฟ้มสะสมผลงานครบทั้ง 5 มิติ</li>
+      <li>ร่วมโครงงานชุมชนกลุ่มอย่างน้อย 1 เรื่อง และร่วมนำเสนอในวันปัจฉิมนิเทศ</li>
+      <li>เข้ารับการประเมิน AAI ทั้งก่อนและหลังเรียนครบถ้วน</li>
+    </ol>
+    <p style="margin:0"><b>ผลที่ได้รับ:</b> วุฒิบัตรจากโรงเรียนผู้สูงอายุตำบลแจ้ซ้อน และขึ้นทะเบียนเป็น “แกนนำพฤฒพลังตำบล” หากสมัครใจ เพื่อเป็นพี่เลี้ยงให้นักเรียนรุ่นถัดไป</p>
+  </div>
+</div></section>
+
+<!-- ======= ทรัพยากร ======= -->
+<section id="res"><div class="wrap">
+  <h3 class="title">แผนประสานทรัพยากร</h3>
+  <div class="note warn" data-edit="resnote">
+    <b>ชี้แจงสำคัญ:</b> โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน <b>ไม่มีงบประมาณดำเนินการของตนเอง</b> การดำเนินงานทั้งหมดอาศัย <b>ความร่วมมือและการสนับสนุนในรูปแบบทรัพยากร (in-kind)</b> จากภาคีเครือข่ายในพื้นที่ ตัวเลขมูลค่าประมาณการในตารางด้านล่างจัดทำขึ้น <b>เพื่อใช้ประกอบการประสานขอรับการสนับสนุน</b> เท่านั้น มิใช่งบประมาณที่ได้รับจัดสรรแล้ว
+  </div>
+  <div data-edit="restab"><table>
+    <tr><th>รายการ</th><th style="width:24%">รูปแบบความร่วมมือ</th><th style="width:22%">หน่วยงานที่ประสาน</th><th style="width:14%">มูลค่าประมาณการ (บาท)</th></tr>
+    <tr><td>วิทยากรประจำวิชา 33 ครั้ง</td><td>วิทยากรจิตอาสา / ภารกิจประจำของหน่วยงาน</td><td>รพ.สต.แจ้ซ้อน, สกร.เมืองปาน, พมจ.ลำปาง</td><td>ไม่ใช้งบ (in-kind)</td></tr>
+    <tr><td>สถานที่จัดการเรียนรู้</td><td>วัดอนุเคราะห์สถานที่ ไฟฟ้า น้ำ เครื่องเสียง</td><td>วัดศรีหลวงแจ้ซ้อน</td><td>ไม่ใช้งบ (in-kind)</td></tr>
+    <tr><td>อาหารกลางวันและอาหารว่าง</td><td>เจ้าภาพหมุนเวียนรายหมู่บ้าน / ผู้มีจิตศรัทธา</td><td>ชุมชน, ชมรมผู้สูงอายุ</td><td>108,000</td></tr>
+    <tr><td>วัสดุฝึกและสื่อการสอน</td><td>ขอรับการสนับสนุนตามโครงการ</td><td>กปท., สกร.</td><td>40,000</td></tr>
+    <tr><td>ตรวจคัดกรองสุขภาพและแบบประเมิน AAI</td><td>บูรณาการกับงานบริการปกติ</td><td>รพ.สต.แจ้ซ้อน, รพ.เมืองปาน</td><td>20,000</td></tr>
+    <tr><td>ทัศนศึกษาแลกเปลี่ยนเรียนรู้ 1 ครั้ง</td><td>ขอใช้รถส่วนกลาง / ผ้าป่าเพื่อการศึกษา</td><td>อปท.ตำบลแจ้ซ้อน</td><td>30,000</td></tr>
+    <tr><td>ปรับสภาพบ้านผู้สูงอายุ 20 หลัง</td><td>โครงการปรับสภาพแวดล้อมที่อยู่อาศัย + แรงงานจิตอาสา</td><td>พมจ.ลำปาง, กองทุนฟื้นฟูสมรรถภาพจังหวัด</td><td>200,000</td></tr>
+    <tr><td>อุปกรณ์เทคโนโลยีสำหรับฝึกปฏิบัติ</td><td>ขอยืมใช้ / รับบริจาคเครื่องสภาพดี</td><td>สกร., โรงเรียนในพื้นที่, ภาคเอกชน</td><td>ไม่ใช้งบ (in-kind)</td></tr>
+    <tr><td>พิธีเปิด–ปิด และวุฒิบัตร</td><td>เจ้าภาพร่วมจากชุมชนและผู้มีจิตศรัทธา</td><td>วัด, ชุมชน, อปท.</td><td>20,000</td></tr>
+    <tr style="font-weight:800"><td colspan="3">รวมมูลค่าประมาณการเพื่อประสานขอรับการสนับสนุน</td><td>418,000</td></tr>
+  </table></div>
+
+  <h3 class="title">ขั้นตอนการประสานขอรับการสนับสนุน</h3>
+  <div data-edit="resstep"><table>
+    <tr><th style="width:18%">ช่วงเวลา</th><th>กิจกรรม</th></tr>
+    <tr><td>ก.ค. – ส.ค. 2569</td><td>ประชุมคณะทำงานร่วม วัด–อปท.–รพ.สต.–ชมรมผู้สูงอายุ จัดทำร่างหลักสูตรและบันทึกข้อตกลงความร่วมมือ (MOU)</td></tr>
+    <tr><td>ส.ค. 2569</td><td>เสนอโครงการต่อกองทุนหลักประกันสุขภาพท้องถิ่น (กปท.)</td></tr>
+    <tr><td>ก.ย. 2569</td><td>ประสาน พมจ.ลำปาง ขอรับรองการจัดตั้งโรงเรียน และแต่งตั้งคณะกรรมการบริหาร</td></tr>
+    <tr><td>ก.ย. – ต.ค. 2569</td><td>รับสมัครนักเรียน ประชาสัมพันธ์ จัดหาเจ้าภาพอาหารกลางวันรายสัปดาห์</td></tr>
+    <tr><td>21 ต.ค. 2569</td><td><b>เปิดเรียนครั้งแรก</b></td></tr>
+    <tr><td>ม.ค. 2570</td><td>รายงานความก้าวหน้าครึ่งปี และเสนอบรรจุกิจกรรมในแผนพัฒนาท้องถิ่นปีถัดไป</td></tr>
+    <tr><td>ส.ค. 2570</td><td>สรุปผล จัดทำรายงานพฤฒพลังตำบล และผลักดันข้อบัญญัติรองรับความยั่งยืน</td></tr>
+  </table></div>
+
+  <h3 class="title">กลไกความยั่งยืนโดยไม่พึ่งงบประมาณ</h3>
+  <div class="grid g3" data-edit="sustain">
+    <div class="card"><h4>🍲 กองบุญอาหารกลางวัน</h4><p>หมุนเวียนเจ้าภาพรายหมู่บ้านและผู้มีจิตศรัทธา จัดทำปฏิทินเจ้าภาพล่วงหน้าทั้งปี ติดประกาศที่วัด</p></div>
+    <div class="card"><h4>👩‍🏫 ธนาคารวิทยากรจิตอาสา</h4><p>ขึ้นทะเบียนวิทยากรในพื้นที่ พร้อมคู่มือการสอนสำเร็จรูปรายวิชา เพื่อให้สอนแทนกันได้ทันที</p></div>
+    <div class="card"><h4>🎒 ครูพี่เลี้ยงรุ่นพี่</h4><p>นักเรียนรุ่นที่จบแล้วกลับมาเป็นผู้ช่วยวิทยากร ลดภาระการจัดหาวิทยากรภายนอก</p></div>
+    <div class="card"><h4>💰 กองทุนผลิตภัณฑ์นักเรียน</h4><p>หักรายได้จากตลาดนัดผลิตภัณฑ์ร้อยละ 10 เข้ากองทุนหมุนเวียนของโรงเรียน</p></div>
+    <div class="card"><h4>🚗 เพื่อนบ้านพากันไป</h4><p>ระบบจับคู่รถรับส่งในหมู่บ้านเดียวกัน แก้ปัญหาการเดินทางโดยไม่ต้องจ้างเหมารถ</p></div>
+    <div class="card"><h4>📄 ผลักดันเข้าแผนท้องถิ่น</h4><p>ใช้รายงานผล AAI เป็นหลักฐานเชิงประจักษ์ เสนอบรรจุในแผนพัฒนาท้องถิ่น</p></div>
+  </div>
+</div></section>
+
+<!-- ======= เครือข่าย ======= -->
+<section id="net"><div class="wrap">
+  <h3 class="title">ภาคีเครือข่ายและบทบาท</h3>
+  <div data-edit="nettab"><table>
+    <tr><th style="width:34%">หน่วยงาน</th><th>บทบาทและการสนับสนุน</th></tr>
+    <tr><td><b>วัดศรีหลวงแจ้ซ้อน</b></td><td>สถานที่จัดการเรียนรู้ ที่ปรึกษากิตติมศักดิ์ และจัดการเรียนการสอนมิติจิตใจ ธรรมะ และภูมิปัญญา</td></tr>
+    <tr><td><b>อปท. ตำบลแจ้ซ้อน</b></td><td>ประสานงานภาพรวม ผลักดันข้อบัญญัติรองรับ สนับสนุนยานพาหนะและบุคลากร</td></tr>
+    <tr><td><b>รพ.สต. ตำบลแจ้ซ้อน / รพ.เมืองปาน</b></td><td>วิทยากรมิติสุขภาพ ตรวจคัดกรอง ประเมิน ADL/TUG และระบบส่งต่อผู้ป่วย</td></tr>
+    <tr><td><b>สำนักงาน พมจ. ลำปาง / ศพอส.</b></td><td>รับรองการจัดตั้ง ให้ความรู้สิทธิสวัสดิการ สนับสนุนโครงการปรับสภาพที่อยู่อาศัย</td></tr>
+    <tr><td><b>สกร. อำเภอเมืองปาน</b></td><td>วิชาชีพ เทคโนโลยีดิจิทัล สื่อการเรียนรู้ และการเรียนรู้ตลอดชีวิต</td></tr>
+    <tr><td><b>ชมรมผู้สูงอายุ / อสม. / อพม.</b></td><td>แกนนำนักเรียน ประสานรับสมัคร วัดความดัน เยี่ยมบ้าน และติดตามกลุ่มติดบ้านติดเตียง</td></tr>
+    <tr><td><b>กองทุนหลักประกันสุขภาพท้องถิ่น (กปท.)</b></td><td>แหล่งสนับสนุนหลักสำหรับกิจกรรมส่งเสริมสุขภาพและป้องกันโรค</td></tr>
+    <tr><td><b>สถานศึกษาในพื้นที่</b></td><td>กิจกรรมสานสัมพันธ์สามวัย เยาวชนอาสาสอนการใช้สมาร์ตโฟนให้ผู้สูงอายุ</td></tr>
+    <tr><td><b>อุทยานแห่งชาติแจ้ซ้อน</b></td><td>วิทยากรด้านสิ่งแวดล้อม ไฟป่า หมอกควัน และการท่องเที่ยวโดยชุมชน</td></tr>
+    <tr><td><b>กำนัน ผู้ใหญ่บ้านทุกหมู่บ้าน</b></td><td>ประชาสัมพันธ์ จัดระบบรับส่งนักเรียน และจัดเจ้าภาพอาหารกลางวันหมุนเวียน</td></tr>
+  </table></div>
+
+  <h3 class="title">ความเสี่ยงและแนวทางรับมือ</h3>
+  <div data-edit="risk"><table>
+    <tr><th style="width:36%">ความเสี่ยง</th><th>แนวทางรับมือ</th></tr>
+    <tr><td>นักเรียนขาดเรียนช่วงฤดูเกษตรกรรม</td><td>กำหนดวันหยุดตรงกับช่วงดำนาและเก็บเกี่ยว จัดระบบเรียนชดเชยผ่านคลิปสั้นในกลุ่ม LINE</td></tr>
+    <tr><td>ฝุ่น PM2.5 รุนแรงช่วง ก.พ.–เม.ย.</td><td>ย้ายเรียนเข้าอาคารปิด จัดห้องปลอดฝุ่นในวัด ประสานแจกหน้ากาก และตรวจค่าฝุ่นก่อนเรียนทุกครั้ง</td></tr>
+    <tr><td>ผู้สูงอายุเจ็บป่วยฉุกเฉินระหว่างเรียน</td><td>มี อสม.ประจำจุด ชุดปฐมพยาบาลและ AED (หากมี) พร้อมแผนส่งต่อ รพ.เมืองปาน ซ้อมแผนปีละ 1 ครั้ง</td></tr>
+    <tr><td>ขาดวิทยากรต่อเนื่องเพราะไม่มีค่าตอบแทน</td><td>สร้างธนาคารวิทยากรจิตอาสา จัดทำคู่มือการสอนสำเร็จรูป และใช้ครูพี่เลี้ยงรุ่นพี่ช่วยสอน</td></tr>
+    <tr><td>การเดินทางจากหมู่บ้านห่างไกลและพื้นที่สูง</td><td>ระบบ “เพื่อนบ้านพากันไป” จับคู่รถรับส่งรายหมู่บ้าน และประสานรถส่วนกลางของ อปท.</td></tr>
+    <tr><td>ความต่อเนื่องเมื่อเปลี่ยนผู้บริหารท้องถิ่น</td><td>จัดทำ MOU ระยะ 3 ปี และบรรจุโรงเรียนผู้สูงอายุไว้ในแผนพัฒนาท้องถิ่นอย่างเป็นทางการ</td></tr>
+  </table></div>
+</div></section>
+
+<footer><div class="wrap" data-edit="foot">
+  <b>โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน</b><br>
+  ศาลาการเปรียญ วัดศรีหลวงแจ้ซ้อน ตำบลแจ้ซ้อน อำเภอเมืองปาน จังหวัดลำปาง<br>
+  เปิดเรียนทุกวันพุธ เวลา 08.30–15.00 น. · รุ่นที่ 1 ปีการศึกษา 2569–2570
+</div></footer>
+
+<div id="bar">
+  <button id="tgl" class="main">✎ เปิดโหมดแก้ไข</button>
+  <button onclick="expJSON()">⬇ สำรองข้อมูล</button>
+  <button onclick="document.getElementById('file').click()">⬆ กู้คืนข้อมูล</button>
+  <button onclick="dlHTML()">💾 ดาวน์โหลดเว็บไซต์</button>
+  <button onclick="window.print()">🖨 พิมพ์</button>
+  <button onclick="resetAll()">↺ ค่าเริ่มต้น</button>
+  <span class="st" id="st"></span>
+  <input type="file" id="file" accept=".json" hidden>
+</div>
+<div id="modal"><div class="mbox"><h3 id="mtitle"></h3><div id="mfields"></div>
+  <div class="mact"><button class="cc" onclick="closeForm()">ยกเลิก</button><button class="sv" onclick="submitForm()">บันทึก</button></div>
+</div></div>
+<div id="toast"></div>
+
+<script>
+const KEY='csz_school_v4';
+const DIM={1:{n:"มิติที่ 1 สุขภาพ",c:"d1",h:40},2:{n:"มิติที่ 2 สังคม จิตใจ และภูมิปัญญา",c:"d2",h:28},3:{n:"มิติที่ 3 เศรษฐกิจและความมั่นคง",c:"d3",h:28},4:{n:"มิติที่ 4 สภาพแวดล้อมและความปลอดภัย",c:"d4",h:20},5:{n:"มิติที่ 5 เทคโนโลยีและนวัตกรรม",c:"d5",h:16}};
+
+const DEF_COURSES=[
+{d:1,code:"สข 101",name:"รู้จักร่างกายวัยเก๋า",h:4,obj:"อธิบายการเปลี่ยนแปลงของร่างกายตามวัย ประเมินสุขภาพตนเองได้ และรู้จักสัญญาณอันตรายที่ต้องรีบพบแพทย์",topics:["การเปลี่ยนแปลงของร่างกายเมื่ออายุมากขึ้น ทั้งระบบกระดูกและกล้ามเนื้อ หัวใจและหลอดเลือด สายตา การได้ยิน ระบบขับถ่าย และการนอนหลับ","โรคเรื้อรังที่พบบ่อยในผู้สูงอายุ เบาหวาน ความดันโลหิตสูง ไขมันในเลือดสูง ข้อเข่าเสื่อม ต้อกระจก","สัญญาณอันตรายที่ต้องไปโรงพยาบาลทันที เจ็บแน่นหน้าอก แขนขาอ่อนแรงซีกเดียว ปากเบี้ยว พูดไม่ชัด ตามัวเฉียบพลัน หกล้มแล้วลุกไม่ได้","การอ่านค่าความดันโลหิตและน้ำตาลปลายนิ้ว และการใช้สมุดประจำตัวผู้สูงอายุ","การประเมินสุขภาพตนเอง 5 ระดับ ตามแบบประเมินของดัชนีพฤฒพลัง"],act:["ฐานวัดความดันโลหิต ชั่งน้ำหนัก วัดส่วนสูง และวัดรอบเอวรายบุคคล","จัดทำสมุดบันทึกสุขภาพประจำตัวนักเรียน","เกมจับคู่ภาพสัญญาณเตือนโรคกับการปฏิบัติที่ถูกต้อง","การบ้าน: วัดความดันที่บ้านสัปดาห์ละ 2 ครั้ง บันทึกลงสมุด"],media:"โปสเตอร์ภาพใหญ่, หุ่นจำลองร่างกาย, เครื่องวัดความดันดิจิทัล, สมุดบันทึกสุขภาพ",sp:"พยาบาลวิชาชีพ รพ.สต.ตำบลแจ้ซ้อน",aai:"การประเมินสุขภาพตนเอง · ความสามารถในการทำกิจวัตรประจำวัน (ADL) · การเข้าถึงบริการสาธารณสุข"},
+{d:1,code:"สข 102",name:"อาหารและโภชนาการผู้สูงวัย",h:8,obj:"เลือกและปรุงอาหารที่เหมาะกับวัย ลดหวานมันเค็ม และได้รับโปรตีนเพียงพอเพื่อชะลอภาวะมวลกล้ามเนื้อถดถอย",topics:["ธงโภชนาการสำหรับผู้สูงอายุ และปริมาณที่ควรได้รับในแต่ละวัน","ภาวะมวลกล้ามเนื้อน้อย (Sarcopenia) และความสำคัญของโปรตีน ไข่ ปลา ถั่ว เต้าหู้","การลดหวาน มัน เค็ม ด้วยวิธีปรุงแบบล้านนา อ่านฉลากโภชนาการ และรู้จักปริมาณโซเดียมแฝง","แคลเซียม วิตามินดี และวิตามินบี 12 กับการป้องกันกระดูกพรุนและภาวะซีด","อาหารสำหรับผู้มีปัญหาการเคี้ยวและการกลืน การดัดแปลงเนื้อสัมผัส","ผักพื้นบ้านและสมุนไพรของตำบลแจ้ซ้อน กับคุณค่าทางโภชนาการ","น้ำดื่มสะอาดและปริมาณน้ำที่เหมาะสมต่อวัน","อาหารกับโรคประจำตัว เบาหวาน ความดัน โรคไต และเกาต์"],act:["ปฏิบัติ: ปรุงเมนูสุขภาพพื้นบ้าน 4 เมนู เช่น แกงแคลดเค็ม น้ำพริกผักนึ่ง ยำผักพื้นบ้าน ข้าวต้มปลา","ฐานทดลองชิมเปรียบเทียบความเค็ม และสาธิตปริมาณน้ำตาลในเครื่องดื่มยอดนิยม","สำรวจผักพื้นบ้านรอบวัดและจัดทำสมุดภาพผักพื้นบ้านแจ้ซ้อน","การบ้าน: ปรับเมนูอาหารที่บ้าน 1 มื้อ ถ่ายรูปส่งกลุ่ม LINE"],media:"ชุดจำลองอาหาร, ฉลากโภชนาการตัวอย่าง, วัตถุดิบจริง, ครัวสาธิตของวัด",sp:"นักโภชนาการ รพ.เมืองปาน ร่วมกับปราชญ์อาหารพื้นบ้าน",aai:"การประเมินสุขภาพตนเอง · ภาวะโภชนาการ · ความสามารถในการดูแลตนเอง"},
+{d:1,code:"สข 103",name:"ขยับกายสบายชีวี",h:8,obj:"ออกกำลังกายได้อย่างถูกวิธีและสม่ำเสมออย่างน้อยสัปดาห์ละ 3 วัน วันละ 30 นาที โดยไม่บาดเจ็บ",topics:["หลักการออกกำลังกาย 4 องค์ประกอบ ความทนทาน ความแข็งแรง ความยืดหยุ่น และการทรงตัว","การอบอุ่นร่างกายและการผ่อนคลายกล้ามเนื้อที่ถูกต้อง","ท่ายืดเหยียดสำหรับผู้สูงอายุ 10 ท่า ทำได้บนเก้าอี้","การออกกำลังกายด้วยยางยืดเพื่อเสริมความแข็งแรงของแขนและขา","ฤๅษีดัดตนและโยคะเก้าอี้","การเดินเพื่อสุขภาพและการนับก้าว การเลือกรองเท้าที่เหมาะสม","รำวงย้อนยุคและการเต้นประกอบเพลงพื้นเมืองเพื่อหัวใจแข็งแรง","ข้อควรระวังและสัญญาณที่ต้องหยุดออกกำลังกายทันที"],act:["ปฏิบัติจริงทุกคาบ และทำต่อเนื่องในช่วงเช้าทุกสัปดาห์ตลอดหลักสูตร","จัดตั้งชมรมเดินเพื่อสุขภาพรอบวัด และทีมรำวงประจำโรงเรียน","บันทึกสมุด “ขยับ 30 นาที” ตรวจทุกสัปดาห์","แข่งขันกิจกรรม “ก้าวท้าใจ” ระดับหมู่บ้าน"],media:"ยางยืดออกกำลังกาย, เก้าอี้ไม่มีเท้าแขน, เครื่องเสียงและเพลงพื้นเมือง, เสื่อปูพื้น",sp:"นักกายภาพบำบัด รพ.เมืองปาน และครูผู้นำออกกำลังกายในชุมชน",aai:"การออกกำลังกายอย่างสม่ำเสมอ · สมรรถภาพทางกาย · การประเมินสุขภาพตนเอง"},
+{d:1,code:"สข 104",name:"ป้องกันการพลัดตกหกล้ม",h:6,obj:"ประเมินความเสี่ยงการหกล้มของตนเอง ฝึกการทรงตัว และปรับพฤติกรรมเพื่อลดโอกาสหกล้ม",topics:["สถิติและผลกระทบของการหกล้มในผู้สูงอายุ กระดูกสะโพกหักกับคุณภาพชีวิต","ปัจจัยเสี่ยงภายในตัว กล้ามเนื้ออ่อนแรง สายตาไม่ดี เวียนศีรษะ ยาบางชนิด","ปัจจัยเสี่ยงภายนอก พื้นลื่น แสงไม่พอ ของเกะกะ บันไดไม่มีราวจับ","การทดสอบ Timed Up and Go และการแปลผล","ท่าฝึกการทรงตัวและความแข็งแรงของขา 8 ท่า","การลุกจากเตียงและเก้าอี้อย่างปลอดภัย และวิธีลุกขึ้นเองเมื่อหกล้ม","การเลือกและใช้ไม้เท้า ไม้ค้ำยัน และวอล์กเกอร์ให้ถูกวิธี"],act:["ทดสอบ TUG รายบุคคล บันทึกผลเป็นค่าฐาน","สถานีฝึกการทรงตัว ยืนขาเดียว เดินต่อส้นเท้า ก้าวข้ามสิ่งกีดขวาง","สาธิตและฝึกวิธีลุกขึ้นจากพื้นอย่างปลอดภัย","การบ้าน: สำรวจจุดเสี่ยงในบ้านตนเอง 10 จุด (เชื่อมกับวิชา สภ 401)"],media:"นาฬิกาจับเวลา, กรวยและอุปกรณ์ฝึกทรงตัว, ไม้เท้าตัวอย่าง, แบบสำรวจบ้าน",sp:"นักกายภาพบำบัด และทีม อสม.",aai:"ความสามารถในการทำกิจวัตรประจำวัน · ความปลอดภัยในที่อยู่อาศัย · สมรรถภาพทางกาย"},
+{d:1,code:"สข 105",name:"สมองดีไม่มีลืม",h:6,obj:"เข้าใจความแตกต่างระหว่างการหลงลืมตามวัยกับภาวะสมองเสื่อม และฝึกกิจกรรมกระตุ้นการทำงานของสมองอย่างต่อเนื่อง",topics:["หลงลืมตามวัยกับภาวะสมองเสื่อมต่างกันอย่างไร และสัญญาณเตือน 10 ประการ","ปัจจัยป้องกันสมองเสื่อม การนอน การออกกำลังกาย อาหาร การเข้าสังคม และการเรียนรู้สิ่งใหม่","แบบคัดกรองสมรรถภาพสมองเบื้องต้น AMT หรือ MMSE-Thai","กิจกรรมกระตุ้นพุทธิปัญญา เกมความจำ จับคู่ภาพ ต่อคำ คิดเลขเร็ว","ศิลปะและดนตรีบำบัดเพื่อกระตุ้นสมอง","การดูแลผู้ป่วยสมองเสื่อมในครอบครัวและการจัดการพฤติกรรมเบื้องต้น"],act:["คัดกรองสมรรถภาพสมองรายบุคคล และส่งต่อผู้ที่มีผลผิดปกติให้ รพ.สต.","ฐานเกมฝึกสมอง 6 ฐาน หมุนเวียน","กิจกรรมวาดภาพความทรงจำวัยเด็กและเล่าเรื่อง","ร้องเพลงเก่าและเพลงพื้นเมืองที่คุ้นเคยเพื่อกระตุ้นความจำ"],media:"บัตรภาพ, เกมกระดาน, สีและกระดาษวาดภาพ, เครื่องเสียง",sp:"พยาบาลจิตเวชชุมชน หรือนักกิจกรรมบำบัด",aai:"สุขภาพจิตและการรู้คิด · การเรียนรู้ตลอดชีวิต · การมีส่วนร่วมทางสังคม"},
+{d:1,code:"สข 106",name:"สุขภาพช่องปากและการใช้ยาอย่างปลอดภัย",h:4,obj:"ดูแลสุขภาพช่องปากได้ถูกวิธี และใช้ยาอย่างสมเหตุผล รู้เท่าทันอันตรายจากยาชุดและสเตียรอยด์",topics:["ปัญหาช่องปากที่พบบ่อยในผู้สูงอายุ ฟันผุที่รากฟัน เหงือกร่น ปากแห้ง","การแปรงฟันที่ถูกวิธี การใช้ไหมขัดฟันและแปรงซอกฟัน","การดูแลฟันเทียมชนิดถอดได้ และการสังเกตแผลในปากที่ต้องพบทันตแพทย์","สุขภาพช่องปากกับการกินอาหารและคุณภาพชีวิต","หลักการใช้ยาอย่างสมเหตุผล ยาที่ต้องกินต่อเนื่องกับยาที่กินเมื่อมีอาการ","อันตรายจากยาชุด ยาลูกกลอน และสเตียรอยด์ที่ขายตามรถเร่","การจัดยาประจำวัน การอ่านฉลากยา และการนำยาทั้งหมดไปให้แพทย์ตรวจสอบ","สมุนไพรที่ใช้ได้และข้อควรระวังเมื่อใช้ร่วมกับยาแผนปัจจุบัน"],act:["สาธิตและฝึกแปรงฟันจริงพร้อมตรวจคราบจุลินทรีย์","กิจกรรม “เปิดถุงยาที่บ้าน” นำยาทั้งหมดมาให้เภสัชกรตรวจสอบ","เกมจำแนกยาปลอดภัยกับยาที่ควรเลี่ยง","การบ้าน: จัดกล่องยาประจำสัปดาห์ของตนเอง"],media:"โมเดลฟันและแปรงสีฟัน, ตัวอย่างยาจริงและฉลากยา, กล่องจัดยา 7 วัน",sp:"ทันตาภิบาล และเภสัชกร รพ.เมืองปาน",aai:"การประเมินสุขภาพตนเอง · ภาวะโภชนาการ · ความปลอดภัยในการใช้ยา"},
+{d:1,code:"สข 107",name:"สุขภาพจิตและการจัดการความเศร้า",h:4,obj:"รู้เท่าทันอารมณ์ตนเอง คัดกรองภาวะซึมเศร้าเบื้องต้นได้ และมีทักษะผ่อนคลายความเครียดด้วยหลักธรรม",topics:["ความเปลี่ยนแปลงทางอารมณ์ในวัยสูงอายุ การสูญเสีย การเกษียณ และภาวะอยู่ลำพัง","แบบคัดกรองภาวะซึมเศร้า 2Q และ 9Q และการแปลผล","สัญญาณเตือนภาวะซึมเศร้ารุนแรงและความคิดทำร้ายตนเอง พร้อมช่องทางขอความช่วยเหลือสายด่วน 1323","เทคนิคผ่อนคลาย การหายใจ 4-7-8 การผ่อนคลายกล้ามเนื้อ และการเจริญสติ","การฝึกสมาธิและเมตตาภาวนาตามแนวพุทธ ณ อุโบสถวัดศรีหลวงแจ้ซ้อน","การสร้างความหมายในชีวิตวัยปลาย และการมองเห็นคุณค่าในตนเอง","ทักษะรับฟังเพื่อนด้วยหัวใจ เพื่อนำไปใช้ในกิจกรรมเยี่ยมเพื่อน"],act:["คัดกรอง 2Q/9Q รายบุคคล และส่งต่อผู้มีคะแนนเสี่ยงเข้าระบบดูแลของ รพ.สต.","ฝึกสมาธิกลุ่มและเดินจงกรมในบริเวณวัด","กิจกรรม “ต้นไม้แห่งความภาคภูมิใจ” เขียนสิ่งที่ภูมิใจในชีวิต","ฝึกบทบาทสมมติการรับฟังเพื่อนที่กำลังเศร้า"],media:"แบบคัดกรอง 2Q/9Q, เสื่อนั่งสมาธิ, บัตรคำความรู้สึก",sp:"พยาบาลจิตเวชชุมชน และพระวิทยากรวัดศรีหลวงแจ้ซ้อน",aai:"สุขภาพจิต · ความพึงพอใจในชีวิต · การมีส่วนร่วมทางสังคม"},
+{d:2,code:"สค 201",name:"ธรรมะกับชีวิตวัยปลาย",h:8,obj:"นำหลักธรรมมาใช้ในการดำเนินชีวิต ยอมรับความเปลี่ยนแปลง และเตรียมความพร้อมในระยะท้ายของชีวิตอย่างสงบ",topics:["หลักไตรลักษณ์กับการยอมรับความเปลี่ยนแปลงของร่างกายและชีวิต","พรหมวิหาร 4 กับการอยู่ร่วมกับลูกหลานและเพื่อนบ้าน","สังคหวัตถุ 4 กับการเป็นผู้ให้ในวัยสูงอายุ","การสวดมนต์ นั่งสมาธิ และเจริญสติในชีวิตประจำวัน","บุญกิริยาวัตถุ และการทำบุญที่เหมาะกับกำลังของตนเอง","การเตรียมตัวตายอย่างสงบ ความหมายของการตายดี และการสื่อสารกับครอบครัว","หนังสือแสดงเจตนาเลือกวิธีการรักษาในวาระสุดท้าย (Living Will) ตามกฎหมาย","ประเพณีและพิธีกรรมล้านนาที่เกี่ยวกับชีวิตและความตาย"],act:["ฟังธรรมบรรยายจากเจ้าอาวาสวัดศรีหลวงแจ้ซ้อน","ปฏิบัติสวดมนต์ทำวัตรและนั่งสมาธิทุกเช้าก่อนเรียน","เขียน “จดหมายถึงลูกหลาน” บอกความในใจและความปรารถนาในระยะท้าย","ศึกษาและทดลองกรอกแบบแสดงเจตนาล่วงหน้า"],media:"หนังสือสวดมนต์ตัวอักษรใหญ่, อุโบสถและศาลาการเปรียญ, แบบฟอร์ม Living Will",sp:"เจ้าอาวาสและพระวิทยากรวัดศรีหลวงแจ้ซ้อน ร่วมกับทีมดูแลผู้ป่วยระยะท้าย รพ.เมืองปาน",aai:"การเข้าร่วมกิจกรรมทางศาสนา · สุขภาพจิต · ความพึงพอใจในชีวิต"},
+{d:2,code:"สค 202",name:"ภูมิปัญญาและวัฒนธรรมล้านนา",h:8,obj:"สืบสานและถ่ายทอดภูมิปัญญาท้องถิ่นของตำบลแจ้ซ้อน พร้อมสร้างคุณค่าในตนเองผ่านบทบาทผู้ถ่ายทอด",topics:["ประวัติความเป็นมาของชุมชนแจ้ซ้อนและวัดศรีหลวงแจ้ซ้อน","ประเพณีสำคัญในรอบปีของล้านนา ปี๋ใหม่เมือง เข้าพรรษา ตานก๋วยสลาก ยี่เป็ง และตานข้าวใหม่","งานหัตถกรรมพื้นบ้าน จักสานไม้ไผ่ ตุงล้านนา โคมยี่เป็ง และเครื่องสักการะ","อักษรธรรมล้านนาเบื้องต้นและการอ่านคำเมือง","ดนตรีและการแสดงพื้นบ้าน ซอ กลองปู่จา และฟ้อนเล็บ","สมุนไพรพื้นบ้านและการแพทย์แผนล้านนาเบื้องต้น ย่ำขาง ตอกเส้น","การจัดทำทะเบียนปราชญ์ชาวบ้านและคลังภูมิปัญญาตำบล","เทคนิคการเป็นวิทยากรถ่ายทอดภูมิปัญญาให้เยาวชน"],act:["ปฏิบัติ: จักสาน ตัดตุง ประดิษฐ์เครื่องสักการะ และทำโคมล้านนา","บันทึกเรื่องเล่าชุมชนโดยผู้สูงอายุ จัดทำเป็นหนังสือเล่มเล็กประจำรุ่น","กิจกรรมสานสัมพันธ์สามวัย ผู้สูงอายุสอนงานหัตถกรรมให้นักเรียนในพื้นที่","ฝึกซ้อมการแสดงพื้นบ้านเพื่อแสดงในวันปัจฉิมนิเทศ"],media:"วัสดุไม้ไผ่และกระดาษสา, เครื่องดนตรีพื้นเมือง, เอกสารอักษรธรรมล้านนา",sp:"ปราชญ์ชาวบ้านตำบลแจ้ซ้อน และสภาวัฒนธรรมอำเภอเมืองปาน",aai:"การมีส่วนร่วมในกิจกรรมชุมชน · การเรียนรู้ตลอดชีวิต · การถ่ายทอดความรู้สู่คนรุ่นหลัง"},
+{d:2,code:"สค 203",name:"สัมพันธภาพในครอบครัวสามวัย",h:4,obj:"สื่อสารกับลูกหลานอย่างสร้างสรรค์ ลดความขัดแย้งในครอบครัว และเข้าใจบทบาทปู่ย่าตายายในยุคปัจจุบัน",topics:["ช่องว่างระหว่างวัยและความแตกต่างของค่านิยมแต่ละรุ่น","การสื่อสารเชิงบวก พูดอย่างไรให้ลูกหลานอยากฟัง","บทบาทปู่ย่าตายายที่เลี้ยงหลานตามลำพังเมื่อพ่อแม่ไปทำงานต่างถิ่น","การเลี้ยงหลานยุคใหม่ การจัดการหน้าจอ และการส่งเสริมพัฒนาการเด็ก","การจัดการความขัดแย้งในบ้านเรื่องเงิน ทรัพย์สิน และการดูแล","การขอความช่วยเหลือเมื่อถูกทอดทิ้งหรือถูกกระทำรุนแรง สายด่วน 1300","การวางแผนเรื่องผู้ดูแลในอนาคตร่วมกับครอบครัว"],act:["บทบาทสมมติสถานการณ์ความขัดแย้งในครอบครัวและฝึกการสื่อสาร","เขียนจดหมายหรืออัดคลิปสั้นถึงลูกหลาน","กิจกรรมวันครอบครัว เชิญลูกหลานมาร่วมที่วัด 1 ครั้ง","การบ้าน: ชวนลูกหลานคุยเรื่องแผนการดูแลในอนาคต 1 ครั้ง"],media:"บัตรสถานการณ์, กระดาษเขียนจดหมาย, สมาร์ตโฟนสำหรับอัดคลิป",sp:"นักสังคมสงเคราะห์ พมจ.ลำปาง และ อพม.ตำบลแจ้ซ้อน",aai:"การช่วยเหลือเกื้อกูลในครอบครัว · ความปลอดภัยในชีวิต · สุขภาพจิต"},
+{d:2,code:"สค 204",name:"จิตอาสาและการมีส่วนร่วมในชุมชน",h:4,obj:"มีบทบาทอาสาสมัครในชุมชนอย่างต่อเนื่อง และร่วมเป็นกลไกดูแลผู้สูงอายุกลุ่มเปราะบางในตำบล",topics:["คุณค่าของการเป็นผู้ให้ในวัยสูงอายุและผลต่อสุขภาพจิต","รู้จักกลุ่มเป้าหมายเปราะบางในตำบล ผู้สูงอายุติดบ้านติดเตียง ผู้พิการ และผู้ป่วยระยะท้าย","ทักษะการเยี่ยมบ้าน การสังเกตอาการ และการรายงานต่อ อสม. หรือ รพ.สต.","งานอาสาในวัดและป่าชุมชน การดูแลศาสนสถานและพื้นที่สาธารณะ","การรวมกลุ่มเป็นชมรมและการเขียนโครงการเล็กเพื่อขอรับการสนับสนุน","การบันทึกชั่วโมงจิตอาสาและการเชิดชูเกียรติ","แนะนำโครงงานชุมชนประจำรุ่นและการแบ่งกลุ่มรับผิดชอบ"],act:["ลงพื้นที่เยี่ยมผู้สูงอายุติดบ้านติดเตียงร่วมกับ อสม. เดือนละ 1 ครั้ง","แบ่งกลุ่มคิดโครงงานชุมชน กลุ่มละ 1 เรื่อง พร้อมเขียนเค้าโครง","กิจกรรมอาสาพัฒนาวัดและพื้นที่สาธารณะ","จัดทำสมุดบันทึกชั่วโมงจิตอาสารายบุคคล"],media:"แบบบันทึกการเยี่ยมบ้าน, แบบฟอร์มเค้าโครงโครงงาน, สมุดจิตอาสา",sp:"อสม. อพม. และนักพัฒนาชุมชน อปท.ตำบลแจ้ซ้อน",aai:"การทำงานอาสาสมัคร · การมีส่วนร่วมในกิจกรรมชุมชน · การช่วยเหลือผู้อื่น"},
+{d:2,code:"สค 205",name:"นันทนาการและศิลปะการแสดง",h:4,obj:"ผ่อนคลายความเครียด สร้างความสัมพันธ์ในกลุ่มเพื่อน และมีกิจกรรมยามว่างที่ทำต่อเนื่องได้ที่บ้าน",topics:["ความสำคัญของนันทนาการต่อสุขภาพกายและใจของผู้สูงอายุ","การขับร้องเพลงไทยเดิม เพลงลูกทุ่ง และเพลงพื้นเมืองคำเมือง","รำวงย้อนยุคและการฟ้อนพื้นบ้านอย่างง่าย","ดนตรีพื้นเมืองและการตีกลองปู่จาเบื้องต้น","เกมสันทนาการที่เหมาะกับผู้สูงอายุและข้อควรระวังด้านความปลอดภัย","การจัดกิจกรรมนันทนาการในงานบุญและงานประเพณีของหมู่บ้าน"],act:["ฝึกซ้อมการแสดงประจำรุ่นเพื่อแสดงในวันปัจฉิมนิเทศและงานประเพณีของตำบล","กิจกรรมคาราโอเกะและเวทีเปิดไมค์ประจำเดือน","จัดตั้งวงดนตรีและทีมฟ้อนของโรงเรียนผู้สูงอายุ"],media:"เครื่องเสียงและไมโครโฟน, เครื่องดนตรีพื้นเมือง, ชุดการแสดง",sp:"ครูนันทนาการ สกร.อำเภอเมืองปาน และศิลปินพื้นบ้านในตำบล",aai:"การมีส่วนร่วมในกิจกรรมชุมชน · สุขภาพจิต · การใช้เวลาว่างอย่างมีคุณค่า"},
+{d:3,code:"ศก 301",name:"บัญชีครัวเรือนและการออม",h:6,obj:"จัดทำบัญชีรายรับรายจ่ายของครัวเรือนได้ วางแผนลดรายจ่าย และมีเงินออมอย่างสม่ำเสมอ",topics:["ความสำคัญของการรู้รายรับรายจ่ายที่แท้จริงของครัวเรือน","วิธีทำบัญชีครัวเรือนอย่างง่ายสำหรับผู้สูงอายุ","การวิเคราะห์รายจ่ายที่ตัดได้ และการลดรายจ่ายที่ไม่จำเป็น","หลักปรัชญาเศรษฐกิจพอเพียงกับการดำรงชีวิตในวัยสูงอายุ","การออมในระบบที่ปลอดภัย ธนาคาร สหกรณ์ กองทุนการออมแห่งชาติ (กอช.) และกองทุนสวัสดิการชุมชน","การจัดการหนี้สินและข้อควรระวังเรื่องการค้ำประกันให้ผู้อื่น","การวางแผนค่าใช้จ่ายด้านสุขภาพและค่าใช้จ่ายในระยะท้ายของชีวิต"],act:["ปฏิบัติทำบัญชีครัวเรือนจริง 1 เดือน และนำมาวิเคราะห์ร่วมกันในชั้นเรียน","กิจกรรม “ลดรายจ่าย 100 บาทต่อสัปดาห์” และติดตามผลรายเดือน","เชิญเจ้าหน้าที่ กอช. และกองทุนสวัสดิการชุมชนมาให้คำแนะนำและรับสมัครในพื้นที่"],media:"สมุดบัญชีครัวเรือนตัวอักษรใหญ่, เครื่องคิดเลขปุ่มใหญ่, เอกสารแนะนำ กอช.",sp:"พัฒนาชุมชนอำเภอเมืองปาน และคณะกรรมการกองทุนสวัสดิการชุมชนตำบล",aai:"การมีเงินออม · ความมั่นคงทางรายได้ · การวางแผนทางการเงิน"},
+{d:3,code:"ศก 302",name:"เกษตรปลอดภัยหลังบ้าน",h:8,obj:"ปลูกผักและพืชอาหารไว้บริโภคในครัวเรือนได้ด้วยวิธีที่เหมาะกับสรีระผู้สูงอายุ ลดรายจ่ายและเพิ่มความมั่นคงทางอาหาร",topics:["หลักเกษตรอินทรีย์และความปลอดภัยของอาหารในครัวเรือน","การออกแบบแปลงผักยกแคร่สูงระดับเอว เพื่อลดการก้มและคุกเข่า","การเตรียมดิน การทำปุ๋ยหมัก และน้ำหมักชีวภาพจากวัสดุในครัวเรือน","การเพาะกล้าและปลูกผักสวนครัวที่โตเร็วและดูแลง่าย","การเพาะเห็ดนางฟ้าในโรงเรือนขนาดเล็ก","ไม้ผลและพืชเศรษฐกิจที่เหมาะกับสภาพอากาศอำเภอเมืองปาน","การป้องกันศัตรูพืชโดยไม่ใช้สารเคมีและอันตรายของสารเคมีต่อสุขภาพผู้สูงอายุ","การเก็บเมล็ดพันธุ์และการแลกเปลี่ยนพันธุ์พืชในชุมชน"],act:["ปฏิบัติสร้างแปลงผักยกแคร่สาธิตในบริเวณวัดเป็นแปลงเรียนรู้ประจำโรงเรียน","ทำปุ๋ยหมักและน้ำหมักชีวภาพ แจกจ่ายให้นักเรียนนำกลับบ้าน","แจกเมล็ดพันธุ์และต้นกล้า พร้อมติดตามผลการปลูกที่บ้าน","ประกวดแปลงผักหลังบ้านดีเด่นประจำรุ่น"],media:"วัสดุทำแปลงยกแคร่, เมล็ดพันธุ์, ก้อนเชื้อเห็ด, อุปกรณ์การเกษตรด้ามยาว",sp:"เกษตรอำเภอเมืองปาน และปราชญ์เกษตรในตำบลแจ้ซ้อน",aai:"ความมั่นคงทางอาหาร · การมีกิจกรรมที่ก่อให้เกิดรายได้ · สมรรถภาพทางกาย"},
+{d:3,code:"ศก 303",name:"อาชีพเสริมสร้างรายได้",h:8,obj:"มีทักษะอาชีพเสริมอย่างน้อย 1 อย่าง รวมกลุ่มผลิตและจำหน่ายได้จริงในชุมชน",topics:["การวิเคราะห์ทุนและโอกาสของตำบลแจ้ซ้อน โดยเฉพาะนักท่องเที่ยวที่มาน้ำตกและบ่อน้ำพุร้อน","การแปรรูปผลผลิตเกษตรและสมุนไพร น้ำพริก ถั่วเน่า ผลไม้แปรรูป และชาสมุนไพร","งานหัตถกรรมเพื่อจำหน่าย ผ้าทอ งานจักสาน และของที่ระลึกจากวัสดุท้องถิ่น","การคำนวณต้นทุนและการตั้งราคาขายอย่างง่าย","การออกแบบบรรจุภัณฑ์และฉลากสินค้าชุมชน","มาตรฐานความสะอาดและการขออนุญาตที่จำเป็นสำหรับอาหารแปรรูป","การรวมกลุ่มอาชีพ การแบ่งหน้าที่ และการจัดการรายได้ของกลุ่ม","ช่องทางจำหน่าย ตลาดชุมชน ร้านค้าวัด และการฝากขายที่แหล่งท่องเที่ยว"],act:["ปฏิบัติผลิตสินค้าจริงอย่างน้อย 3 ผลิตภัณฑ์ตามความถนัดของแต่ละกลุ่ม","จัดตั้งกลุ่มอาชีพผู้สูงอายุอย่างน้อย 3 กลุ่ม พร้อมกติกากลุ่ม","จัดตลาดนัดผลิตภัณฑ์ผู้สูงอายุที่ลานวัด 1 ครั้ง","คำนวณต้นทุนและกำไรของผลิตภัณฑ์ที่ผลิตจริง"],media:"วัตถุดิบและอุปกรณ์แปรรูป, บรรจุภัณฑ์ตัวอย่าง, ป้ายและอุปกรณ์จัดตลาดนัด",sp:"ครูวิชาชีพ สกร.อำเภอเมืองปาน พัฒนาชุมชน และกลุ่มวิสาหกิจชุมชนในพื้นที่",aai:"การมีงานทำและรายได้ · ความมั่นคงทางรายได้ · การมีส่วนร่วมทางเศรษฐกิจ"},
+{d:3,code:"ศก 304",name:"สิทธิและสวัสดิการที่พึงได้รับ",h:4,obj:"รู้สิทธิของตนเองครบถ้วน เข้าถึงสวัสดิการที่พึงได้รับ และดำเนินการยื่นเรื่องได้ด้วยตนเองหรือผ่านผู้ช่วยเหลือ",topics:["เบี้ยยังชีพผู้สูงอายุ เงื่อนไข อัตรา และขั้นตอนการลงทะเบียน","สิทธิหลักประกันสุขภาพแห่งชาติและการใช้สิทธิข้ามเขต","บัตรประจำตัวคนพิการและสิทธิประโยชน์ที่ได้รับ","กองทุนผู้สูงอายุ การกู้ยืมเงินทุนประกอบอาชีพรายบุคคลและรายกลุ่ม","โครงการปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับผู้สูงอายุ","เงินสงเคราะห์ในการจัดการศพผู้สูงอายุตามประเพณี","สิทธิตามพระราชบัญญัติผู้สูงอายุ เช่น การลดหย่อนค่าโดยสารและช่องทางบริการพิเศษ","ช่องทางร้องเรียนและขอความช่วยเหลือ ศูนย์ช่วยเหลือสังคม สายด่วน 1300"],act:["ตรวจสอบสิทธิรายบุคคล และจัดทำบัญชีรายชื่อผู้ที่ยังเข้าไม่ถึงสิทธิเพื่อส่งต่อหน่วยงาน","ฝึกกรอกแบบฟอร์มคำขอรับสิทธิต่าง ๆ จริง","จัดคลินิกให้คำปรึกษาสิทธิโดยเจ้าหน้าที่ พมจ. ที่วัด 1 ครั้ง"],media:"แบบฟอร์มคำขอ, คู่มือสิทธิผู้สูงอายุฉบับย่อตัวอักษรใหญ่",sp:"นักสังคมสงเคราะห์ พมจ.ลำปาง และเจ้าหน้าที่ อปท.ตำบลแจ้ซ้อน",aai:"การเข้าถึงหลักประกันทางสังคม · ความมั่นคงทางรายได้ · การเข้าถึงบริการสาธารณสุข"},
+{d:3,code:"ศก 305",name:"รู้ทันภัยการเงินและการจัดการทรัพย์สิน",h:2,obj:"ป้องกันตนเองจากการถูกหลอกลวงทางการเงิน และวางแผนจัดการทรัพย์สินล่วงหน้าอย่างรอบคอบ",topics:["รูปแบบการหลอกลวงที่พบบ่อยกับผู้สูงอายุ แก๊งคอลเซ็นเตอร์ การอ้างเป็นเจ้าหน้าที่รัฐ และการหลอกให้โอนเงิน","ข้อสังเกตของข้อเสนอที่ผิดปกติ การรับประกันผลตอบแทนสูงเกินจริงและการชักชวนแบบเร่งรัด","หนี้นอกระบบ ดอกเบี้ยเกินอัตราที่กฎหมายกำหนด และช่องทางขอความช่วยเหลือ","การค้ำประกันและการโอนที่ดินให้ผู้อื่น สิ่งที่ต้องระวังก่อนลงลายมือชื่อ","พินัยกรรมแบบเขียนเองทั้งฉบับและแบบทำที่อำเภอ","การเก็บรักษาเอกสารสำคัญและการแจ้งให้ครอบครัวทราบที่เก็บ","ช่องทางแจ้งเหตุ สายด่วนตำรวจ 191 และศูนย์ปราบปรามอาชญากรรมทางเทคโนโลยี 1441"],act:["ดูคลิปกรณีศึกษาจริงและวิเคราะห์ร่วมกันว่าผิดพลาดตรงจุดใด","บทบาทสมมติรับสายจากมิจฉาชีพและฝึกวิธีตอบปฏิเสธ","ทบทวนรายการเอกสารสำคัญของตนเองและจัดทำบัญชีทรัพย์สินอย่างง่าย"],media:"คลิปกรณีศึกษา, บัตรสถานการณ์, แบบฟอร์มบัญชีทรัพย์สิน",sp:"เจ้าหน้าที่ตำรวจ สภ.เมืองปาน และนิติกร อปท.",aai:"ความปลอดภัยในชีวิตและทรัพย์สิน · ความมั่นคงทางรายได้"},
+{d:4,code:"สภ 401",name:"บ้านปลอดภัยวัยสูงอายุ",h:6,obj:"สำรวจและปรับปรุงจุดเสี่ยงในบ้านของตนเองได้ เพื่อลดอุบัติเหตุและเพิ่มความสามารถในการใช้ชีวิตอย่างอิสระ",topics:["หลักการออกแบบเพื่อคนทุกวัย (Universal Design) ฉบับเข้าใจง่าย","จุดเสี่ยงสำคัญ 5 บริเวณ ห้องน้ำ บันได ห้องนอน ห้องครัว และทางเดินรอบบ้าน","ห้องน้ำปลอดภัย ราวจับ พื้นกันลื่น โถสุขภัณฑ์แบบนั่ง และระบบเรียกฉุกเฉิน","แสงสว่างที่เพียงพอ และไฟส่องทางเดินในเวลากลางคืน","การจัดวางเฟอร์นิเจอร์และการกำจัดสิ่งกีดขวางทางเดิน","การปรับปรุงด้วยวัสดุราคาประหยัดและภูมิปัญญาท้องถิ่น ไม้ไผ่และวัสดุเหลือใช้","ช่องทางขอรับการสนับสนุนปรับสภาพที่อยู่อาศัยจาก พมจ. และกองทุนฟื้นฟูสมรรถภาพจังหวัด","การจัดทำแผนปรับปรุงบ้านรายหลังและลำดับความสำคัญ"],act:["สำรวจบ้านตนเองด้วยแบบ Home Safety Checklist และให้คะแนนความเสี่ยง","ลงพื้นที่สำรวจบ้านเพื่อนนักเรียนที่มีความเสี่ยงสูงเป็นกรณีศึกษา","ปฏิบัติติดตั้งราวจับและแผ่นกันลื่นในบ้านตัวอย่าง 1 หลัง โดยแรงงานจิตอาสา","จัดทำบัญชีรายชื่อบ้านที่ต้องปรับปรุงเร่งด่วนเพื่อเสนอขอรับการสนับสนุน"],media:"แบบสำรวจจุดเสี่ยง, ราวจับและแผ่นกันลื่นตัวอย่าง, ภาพก่อน-หลังการปรับปรุง",sp:"นักกายภาพบำบัด ช่างโยธา อปท. และนักสังคมสงเคราะห์ พมจ.",aai:"ความปลอดภัยในที่อยู่อาศัย · ความสามารถในการทำกิจวัตรประจำวัน · สภาพแวดล้อมที่เอื้อต่อพฤฒพลัง"},
+{d:4,code:"สภ 402",name:"สิ่งแวดล้อมชุมชนและการจัดการทรัพยากร",h:6,obj:"มีส่วนร่วมดูแลสิ่งแวดล้อมของตำบล จัดการขยะในครัวเรือน และร่วมอนุรักษ์ป่าต้นน้ำแจ้ซ้อน",topics:["สถานการณ์สิ่งแวดล้อมของตำบลแจ้ซ้อนและพื้นที่ต้นน้ำ","การคัดแยกขยะ 4 ประเภทในครัวเรือน และการลดขยะจากต้นทาง","ธนาคารขยะและการสร้างรายได้จากขยะรีไซเคิล","การทำปุ๋ยจากขยะอินทรีย์และถังหมักรักษ์โลก","การจัดการน้ำเสียในครัวเรือนและการใช้น้ำอย่างประหยัด","ป่าชุมชนและการใช้ประโยชน์อย่างยั่งยืน ของป่าและสมุนไพร","การอนุรักษ์แหล่งน้ำและความสำคัญของพื้นที่ต้นน้ำต่อการท่องเที่ยวของตำบล","บทบาทผู้สูงอายุในฐานะผู้เฝ้าระวังสิ่งแวดล้อมของชุมชน"],act:["ปฏิบัติคัดแยกขยะที่วัดและจัดตั้งจุดรับขยะรีไซเคิลประจำโรงเรียน","ทำถังหมักปุ๋ยอินทรีย์นำกลับไปใช้ที่บ้าน","กิจกรรมปลูกต้นไม้และบวชป่าร่วมกับชุมชนและอุทยานแห่งชาติแจ้ซ้อน","สำรวจและจัดทำแผนที่แหล่งสมุนไพรในป่าชุมชน"],media:"ถังคัดแยกขยะ, ถังหมักปุ๋ย, กล้าไม้, แผนที่ชุมชน",sp:"เจ้าหน้าที่อุทยานแห่งชาติแจ้ซ้อน กองสาธารณสุข อปท. และคณะกรรมการป่าชุมชน",aai:"สภาพแวดล้อมที่เอื้อต่อพฤฒพลัง · การมีส่วนร่วมในกิจกรรมชุมชน"},
+{d:4,code:"สภ 403",name:"ฝุ่น PM2.5 ไฟป่า และหมอกควัน",h:4,obj:"ป้องกันตนเองจากมลพิษทางอากาศได้อย่างถูกวิธีในช่วงวิกฤตหมอกควันภาคเหนือ และร่วมลดการเผาในพื้นที่",topics:["สถานการณ์หมอกควันภาคเหนือและผลกระทบต่อสุขภาพผู้สูงอายุ โดยเฉพาะผู้มีโรคปอดและหัวใจ","การอ่านค่าคุณภาพอากาศและระดับสีเตือนภัย พร้อมแอปพลิเคชันที่ใช้ตรวจสอบ","การเลือกและสวมหน้ากากป้องกันฝุ่นให้แนบสนิท และข้อจำกัดของหน้ากากผ้า","การจัดห้องปลอดฝุ่นในบ้านด้วยวิธีประหยัด และการทำเครื่องกรองอากาศอย่างง่าย","การปรับกิจกรรมประจำวันในช่วงค่าฝุ่นสูง และสัญญาณที่ต้องพบแพทย์","สาเหตุของไฟป่าในพื้นที่และทางเลือกแทนการเผาเศษวัสดุทางการเกษตร","การทำแนวกันไฟและบทบาทของชุมชนในการเฝ้าระวัง","ช่องทางแจ้งเหตุไฟป่าและการขอรับความช่วยเหลือ"],act:["ฝึกสวมหน้ากากและทดสอบความแนบสนิทรายบุคคล","สาธิตและร่วมจัดห้องปลอดฝุ่นในศาลาการเปรียญของวัด","ตรวจสอบค่าฝุ่นประจำวันผ่านแอปพลิเคชันในมือถือ เชื่อมกับวิชา ทน 502","ร่วมกิจกรรมทำแนวกันไฟกับชุมชนและอุทยานฯ"],media:"หน้ากากป้องกันฝุ่น, เครื่องวัดค่าฝุ่น, พัดลมและแผ่นกรองสำหรับสาธิต",sp:"เจ้าหน้าที่อุทยานแห่งชาติแจ้ซ้อน และพยาบาลเวชปฏิบัติ รพ.สต.",aai:"สภาพแวดล้อมที่เอื้อต่อพฤฒพลัง · การประเมินสุขภาพตนเอง · ความปลอดภัยในชีวิต"},
+{d:4,code:"สภ 404",name:"เตรียมพร้อมรับภัยพิบัติและเหตุฉุกเฉิน",h:4,obj:"รับมือเหตุฉุกเฉินและภัยพิบัติในพื้นที่ได้อย่างปลอดภัย และช่วยเหลือเบื้องต้นแก่ผู้อื่นได้",topics:["ภัยพิบัติที่มีโอกาสเกิดในพื้นที่เมืองปาน น้ำป่าไหลหลาก ดินโคลนถล่ม วาตภัย และภัยหนาว","การเตรียมกระเป๋าฉุกเฉินประจำบ้านและรายการยาประจำตัวที่ต้องนำติดตัว","แผนอพยพของหมู่บ้านและจุดรวมพลที่ปลอดภัย","การปฐมพยาบาลเบื้องต้น แผล เลือดออก กระดูกหัก และการเคลื่อนย้ายผู้บาดเจ็บ","การช่วยฟื้นคืนชีพขั้นพื้นฐาน (CPR) และการใช้เครื่อง AED","การช่วยเหลือผู้สำลักอาหารด้วยวิธี Heimlich","การแจ้งเหตุฉุกเฉินอย่างมีประสิทธิภาพ สายด่วน 1669 1784 191 และ 1300","ระบบเพื่อนบ้านช่วยเพื่อนบ้านสำหรับผู้สูงอายุที่อยู่ลำพัง"],act:["ฝึกปฏิบัติ CPR กับหุ่นจำลองรายบุคคล","ซ้อมแผนอพยพจากศาลาการเปรียญไปยังจุดปลอดภัย","จัดทำกระเป๋าฉุกเฉินตัวอย่างและรายการตรวจสอบนำกลับบ้าน","จัดทำบัญชีผู้สูงอายุที่อยู่ลำพังในแต่ละหมู่บ้านเพื่อระบบเฝ้าระวัง"],media:"หุ่น CPR, ชุดปฐมพยาบาล, แผนที่จุดเสี่ยงและจุดรวมพลของตำบล",sp:"ทีมกู้ชีพ รพ.เมืองปาน และงานป้องกันและบรรเทาสาธารณภัย อปท.",aai:"ความปลอดภัยในชีวิตและทรัพย์สิน · การเข้าถึงบริการสาธารณสุข · การช่วยเหลือผู้อื่น"},
+{d:5,code:"ทน 501",name:"สมาร์ตโฟนฉบับผู้สูงวัย",h:6,obj:"ใช้สมาร์ตโฟนติดต่อสื่อสารกับครอบครัวและเข้าถึงข้อมูลข่าวสารได้ด้วยตนเอง",topics:["ส่วนประกอบของสมาร์ตโฟนและการตั้งค่าเบื้องต้นให้เหมาะกับผู้สูงอายุ ขยายตัวอักษร เพิ่มเสียง และเปิดโหมดง่าย","การโทรออก รับสาย บันทึกรายชื่อ และการบล็อกเบอร์ที่ไม่พึงประสงค์","การใช้งาน LINE ส่งข้อความ ส่งเสียง ส่งรูป และวิดีโอคอลหาลูกหลาน","การใช้กลุ่ม LINE ของโรงเรียนและมารยาทในการสื่อสารกลุ่ม","การถ่ายภาพ การเก็บรูป และการแชร์รูปให้ครอบครัว","การใช้งานสั่งงานด้วยเสียงและการพิมพ์ด้วยเสียงสำหรับผู้ที่พิมพ์ไม่สะดวก","การค้นหาข้อมูลและรับชมคลิปความรู้บนอินเทอร์เน็ต","การจัดการพื้นที่เก็บข้อมูล แบตเตอรี่ และการเชื่อมต่อ Wi-Fi"],act:["ปฏิบัติจริงกับเครื่องของตนเอง จับคู่ 1 ต่อ 1 กับเยาวชนอาสา","ตั้งกลุ่ม LINE ของนักเรียนแต่ละหมู่บ้าน และส่งงานผ่านกลุ่ม","ภารกิจ: วิดีโอคอลหาลูกหลานด้วยตนเอง 1 ครั้ง และถ่ายภาพส่งเข้ากลุ่ม","ทดสอบทักษะดิจิทัลพื้นฐาน 10 รายการแบบปฏิบัติ"],media:"สมาร์ตโฟนของนักเรียน, เครื่องสำรองสำหรับผู้ที่ไม่มี, จอฉายภาพหน้าจอ, คู่มือภาพประกอบตัวใหญ่",sp:"ครู สกร.อำเภอเมืองปาน และนักเรียนอาสาจากโรงเรียนในพื้นที่",aai:"การเข้าถึงข้อมูลข่าวสาร · การใช้อินเทอร์เน็ต · การเรียนรู้ตลอดชีวิต · การติดต่อกับครอบครัว"},
+{d:5,code:"ทน 502",name:"บริการภาครัฐและบริการดิจิทัลในชีวิตประจำวัน",h:4,obj:"ใช้แอปพลิเคชันภาครัฐและบริการดิจิทัลพื้นฐานเพื่อเข้าถึงสิทธิและบริการได้ด้วยตนเอง",topics:["ภาพรวมบริการภาครัฐแบบออนไลน์และประโยชน์ต่อผู้สูงอายุที่อยู่ห่างไกล","แอปพลิเคชันทางรัฐ การยืนยันตัวตนและการตรวจสอบสิทธิสวัสดิการ","แอปพลิเคชันด้านสุขภาพ การตรวจสอบสิทธิการรักษาและประวัติการรับวัคซีน","การตรวจสอบการรับเบี้ยยังชีพและการแจ้งเปลี่ยนแปลงข้อมูล","การทำธุรกรรมทางการเงินพื้นฐานอย่างปลอดภัย การโอนเงินและการตรวจสอบยอด","แอปพลิเคชันตรวจสอบคุณภาพอากาศและพยากรณ์อากาศ เชื่อมกับวิชา สภ 403","การตั้งรหัสผ่านที่ปลอดภัยและการเก็บรักษาข้อมูลส่วนบุคคล","ข้อควรระวังสำคัญ ไม่ให้ผู้อื่นยืมเครื่องหรือบอกรหัสผ่านเด็ดขาด"],act:["ปฏิบัติติดตั้งและใช้งานแอปพลิเคชันจริงบนเครื่องของตนเอง","ภารกิจตรวจสอบสิทธิของตนเองและบันทึกผล","ฝึกตั้งรหัสผ่านที่ปลอดภัยและจดบันทึกเก็บไว้ในที่ปลอดภัย"],media:"สมาร์ตโฟน, อินเทอร์เน็ตไร้สายของวัด, คู่มือขั้นตอนภาพประกอบ",sp:"ครู สกร. และเจ้าหน้าที่ อปท.ตำบลแจ้ซ้อน",aai:"การเข้าถึงข้อมูลข่าวสาร · การเข้าถึงบริการสาธารณสุขและหลักประกันทางสังคม · การใช้อินเทอร์เน็ต"},
+{d:5,code:"ทน 503",name:"รู้เท่าทันข่าวลวงและภัยออนไลน์",h:4,obj:"ตรวจสอบข้อมูลก่อนเชื่อและก่อนแชร์ และป้องกันตนเองจากภัยคุกคามทางออนไลน์ได้",topics:["ลักษณะของข่าวปลอมและข้อมูลสุขภาพที่บิดเบือน โดยเฉพาะการโฆษณาอาหารเสริมเกินจริง","วิธีตรวจสอบข้อมูลเบื้องต้น ดูแหล่งที่มา ดูวันที่ และตรวจสอบกับหน่วยงานทางการ","ผลกระทบของการแชร์ข้อมูลเท็จและความรับผิดตามกฎหมาย","ลิงก์อันตรายและแอปพลิเคชันดูดเงิน ข้อสังเกตและวิธีหลีกเลี่ยง","การหลอกลวงผ่านข้อความและสายโทรศัพท์ที่อ้างเป็นหน่วยงานรัฐ","การหลอกลวงแบบสร้างความสัมพันธ์และการขอให้โอนเงิน","การตั้งค่าความเป็นส่วนตัวและการระวังการเปิดเผยข้อมูลส่วนบุคคลออนไลน์","ขั้นตอนเมื่อตกเป็นเหยื่อ การอายัดบัญชีและการแจ้งความออนไลน์ สายด่วน 1441"],act:["กิจกรรม “จริงหรือลวง” วิเคราะห์ข่าวตัวอย่างจากกลุ่ม LINE จริง","ฝึกตรวจสอบข่าวด้วยการค้นหาแหล่งต้นทาง","บทบาทสมมติรับสายและข้อความจากมิจฉาชีพ","จัดทำป้ายเตือนภัยออนไลน์ติดที่วัดและหอกระจายข่าวหมู่บ้าน"],media:"ตัวอย่างข่าวปลอม, คลิปกรณีศึกษา, สมาร์ตโฟน",sp:"ครู สกร. และเจ้าหน้าที่ตำรวจ สภ.เมืองปาน",aai:"การเข้าถึงข้อมูลข่าวสารที่ถูกต้อง · ความปลอดภัยในชีวิตและทรัพย์สิน · การรู้เท่าทันสื่อ"},
+{d:5,code:"ทน 504",name:"นวัตกรรมช่วยชีวิตประจำวัน",h:2,obj:"รู้จักและเลือกใช้อุปกรณ์หรือนวัตกรรมที่ช่วยให้ใช้ชีวิตประจำวันได้สะดวกและปลอดภัยยิ่งขึ้น",topics:["อุปกรณ์ช่วยเดินและอุปกรณ์ช่วยหยิบจับที่เหมาะกับสภาพร่างกายแต่ละคน","กล่องยาเตือนเวลาและแอปพลิเคชันเตือนกินยา","อุปกรณ์สวมใส่วัดชีพจรและนับก้าว การแปลผลเบื้องต้นและข้อจำกัด","ระบบแจ้งเหตุฉุกเฉินสำหรับผู้สูงอายุที่อยู่ลำพัง ปุ่มฉุกเฉินและการเชื่อมกับ อสม.","นวัตกรรมพื้นบ้านต้นทุนต่ำที่ชุมชนประดิษฐ์ได้เอง","ช่องทางขอยืมหรือขอรับการสนับสนุนกายอุปกรณ์จากกองทุนฟื้นฟูสมรรถภาพจังหวัด","การประดิษฐ์นวัตกรรมอย่างง่ายโดยกลุ่มนักเรียนเพื่อนำเสนอเป็นโครงงาน"],act:["ฐานทดลองใช้อุปกรณ์จริงและเลือกสิ่งที่เหมาะกับตนเอง","ประดิษฐ์อุปกรณ์ช่วยเหลือต้นทุนต่ำ 1 ชิ้นต่อกลุ่ม","จัดทำบัญชีผู้ต้องการกายอุปกรณ์เพื่อประสานขอรับการสนับสนุน"],media:"ตัวอย่างกายอุปกรณ์, กล่องยาอัจฉริยะ, วัสดุประดิษฐ์",sp:"นักกายภาพบำบัด และครูช่าง สกร.อำเภอเมืองปาน",aai:"สภาพแวดล้อมที่เอื้อต่อพฤฒพลัง · ความสามารถในการทำกิจวัตรประจำวัน · ความปลอดภัยในชีวิต"}];
+
+const DEF_CAL=[
+{m:"ตุลาคม 2569",n:1,d:"พุธ 21 ต.ค. 69",t:"sp",title:"ปฐมนิเทศ เปิดเรียนรุ่นที่ 1",sub:"พิธีเปิด ไหว้ครู สืบชะตาล้านนา · ขึ้นทะเบียนนักเรียน · ชี้แจงหลักสูตรและกติกา · ประเมินฐาน AAI ครั้งที่ 1 (ADL, TUG, 2Q/9Q, AMT, แบบสำรวจเศรษฐกิจ-สภาพแวดล้อม-ดิจิทัล)"},
+{m:"ตุลาคม 2569",n:2,d:"พุธ 28 ต.ค. 69",t:"1",title:"สข 101 รู้จักร่างกายวัยเก๋า (4 ชม.)",sub:"เช้า: การเปลี่ยนแปลงของร่างกายและโรคเรื้อรังที่พบบ่อย · บ่าย: ฐานตรวจสุขภาพ จัดทำสมุดบันทึกสุขภาพประจำตัว"},
+{m:"พฤศจิกายน 2569",n:3,d:"พุธ 4 พ.ย. 69",t:"1",title:"สข 102 อาหารและโภชนาการ ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ธงโภชนาการผู้สูงวัย โปรตีนกับมวลกล้ามเนื้อ · บ่าย: ปฏิบัติปรุงเมนูสุขภาพพื้นบ้าน 2 เมนู"},
+{m:"พฤศจิกายน 2569",n:4,d:"พุธ 11 พ.ย. 69",t:"1",title:"สข 102 อาหารและโภชนาการ ครั้งที่ 2 (4 ชม.)",sub:"เช้า: ลดหวานมันเค็ม อ่านฉลาก อาหารกับโรคประจำตัว · บ่าย: สำรวจผักพื้นบ้านรอบวัดและจัดทำสมุดภาพ"},
+{m:"พฤศจิกายน 2569",n:5,d:"พุธ 18 พ.ย. 69",t:"1",title:"สข 103 ขยับกายสบายชีวี ครั้งที่ 1 (4 ชม.)",sub:"เช้า: หลักการออกกำลังกาย 4 องค์ประกอบ · บ่าย: ปฏิบัติยืดเหยียด 10 ท่า และยางยืด"},
+{m:"พฤศจิกายน 2569",n:6,d:"พุธ 25 พ.ย. 69",t:"1",title:"สข 103 ขยับกายสบายชีวี ครั้งที่ 2 (4 ชม.)",sub:"เช้า: ฤๅษีดัดตน โยคะเก้าอี้ · บ่าย: รำวงย้อนยุค ตั้งชมรมเดินเพื่อสุขภาพรอบวัด"},
+{m:"ธันวาคม 2569",n:7,d:"พุธ 2 ธ.ค. 69",t:"1",title:"สข 104 ป้องกันการพลัดตกหกล้ม ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ปัจจัยเสี่ยงและผลกระทบของการหกล้ม · บ่าย: ทดสอบ TUG รายบุคคล บันทึกค่าฐาน"},
+{m:"ธันวาคม 2569",n:8,d:"พุธ 9 ธ.ค. 69",t:"1",title:"สข 104 (2 ชม.) + สข 106 ช่องปาก (2 ชม.)",sub:"เช้า: สถานีฝึกการทรงตัวและวิธีลุกเมื่อหกล้ม · บ่าย: สุขภาพช่องปาก ฝึกแปรงฟันและดูแลฟันเทียม"},
+{m:"ธันวาคม 2569",n:9,d:"พุธ 16 ธ.ค. 69",t:"1",title:"สข 105 สมองดีไม่มีลืม ครั้งที่ 1 (4 ชม.)",sub:"เช้า: หลงลืมตามวัยกับสมองเสื่อม คัดกรอง AMT · บ่าย: ฐานเกมฝึกสมอง 6 ฐาน"},
+{m:"ธันวาคม 2569",n:10,d:"พุธ 23 ธ.ค. 69",t:"1",title:"สข 105 (2 ชม.) + สข 106 การใช้ยา (2 ชม.)",sub:"เช้า: ศิลปะและดนตรีบำบัด วาดภาพความทรงจำ · บ่าย: กิจกรรมเปิดถุงยาที่บ้าน เภสัชกรตรวจสอบยา"},
+{m:"ธันวาคม 2569",n:0,d:"พุธ 30 ธ.ค. 69",t:"br",title:"หยุดเทศกาลส่งท้ายปีเก่าต้อนรับปีใหม่",sub:"ไม่มีการเรียนการสอน"},
+{m:"มกราคม 2570",n:0,d:"พุธ 6 ม.ค. 70",t:"br",title:"หยุดต่อเนื่องเทศกาลปีใหม่",sub:"ไม่มีการเรียนการสอน · นักเรียนร่วมกิจกรรมทำบุญปีใหม่ที่วัดตามอัธยาศัย"},
+{m:"มกราคม 2570",n:11,d:"พุธ 13 ม.ค. 70",t:"1",title:"สข 107 สุขภาพจิตและการจัดการความเศร้า (4 ชม.)",sub:"เช้า: คัดกรอง 2Q/9Q เทคนิคผ่อนคลาย · บ่าย: ฝึกสมาธิและเดินจงกรม กิจกรรมต้นไม้แห่งความภาคภูมิใจ · จบมิติที่ 1 (40 ชม.)"},
+{m:"มกราคม 2570",n:12,d:"พุธ 20 ม.ค. 70",t:"2",title:"สค 201 ธรรมะกับชีวิตวัยปลาย ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ไตรลักษณ์และพรหมวิหาร 4 โดยเจ้าอาวาส · บ่าย: ปฏิบัติสวดมนต์และเจริญสติในชีวิตประจำวัน"},
+{m:"มกราคม 2570",n:13,d:"พุธ 27 ม.ค. 70",t:"2",title:"สค 201 ธรรมะกับชีวิตวัยปลาย ครั้งที่ 2 (4 ชม.)",sub:"เช้า: การเตรียมตัวตายอย่างสงบและหนังสือแสดงเจตนาล่วงหน้า · บ่าย: เขียนจดหมายถึงลูกหลาน"},
+{m:"กุมภาพันธ์ 2570",n:14,d:"พุธ 3 ก.พ. 70",t:"2",title:"สค 202 ภูมิปัญญาล้านนา ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ประวัติชุมชนแจ้ซ้อนและประเพณีในรอบปี · บ่าย: ปฏิบัติจักสานและตัดตุงล้านนา"},
+{m:"กุมภาพันธ์ 2570",n:15,d:"พุธ 10 ก.พ. 70",t:"2",title:"สค 202 ภูมิปัญญาล้านนา ครั้งที่ 2 (4 ชม.)",sub:"เช้า: อักษรธรรมล้านนาและสมุนไพรพื้นบ้าน · บ่าย: กิจกรรมสามวัย ผู้สูงอายุสอนหัตถกรรมให้เยาวชน"},
+{m:"กุมภาพันธ์ 2570",n:16,d:"พุธ 17 ก.พ. 70",t:"2",title:"สค 203 สัมพันธภาพในครอบครัวสามวัย (4 ชม.)",sub:"เช้า: การสื่อสารเชิงบวกและการเลี้ยงหลานยุคใหม่ · บ่าย: บทบาทสมมติจัดการความขัดแย้ง สิทธิเมื่อถูกทอดทิ้ง สายด่วน 1300"},
+{m:"กุมภาพันธ์ 2570",n:17,d:"พุธ 24 ก.พ. 70",t:"2",title:"สค 204 จิตอาสาและการมีส่วนร่วมในชุมชน (4 ชม.)",sub:"เช้า: ทักษะการเยี่ยมบ้านและการสังเกตอาการ · บ่าย: แบ่งกลุ่มคิดโครงงานชุมชนและเขียนเค้าโครง"},
+{m:"มีนาคม 2570",n:18,d:"พุธ 3 มี.ค. 70",t:"2",title:"สค 205 นันทนาการและศิลปะการแสดง (4 ชม.)",sub:"เช้า: ขับร้องเพลงพื้นเมืองและเกมสันทนาการ · บ่าย: ตั้งวงดนตรีและทีมฟ้อนประจำรุ่น · จบมิติที่ 2 (28 ชม.)"},
+{m:"มีนาคม 2570",n:19,d:"พุธ 10 มี.ค. 70",t:"sp",title:"ทัศนศึกษาแลกเปลี่ยนเรียนรู้",sub:"ศึกษาดูงานโรงเรียนผู้สูงอายุต้นแบบต่างตำบล · ประเมิน AAI ระหว่างทาง (ADL, TUG) · ถอดบทเรียนกลับมาปรับโครงงานชุมชน"},
+{m:"มีนาคม 2570",n:20,d:"พุธ 17 มี.ค. 70",t:"4",title:"สภ 401 บ้านปลอดภัยวัยสูงอายุ ครั้งที่ 1 (4 ชม.)",sub:"เช้า: Universal Design และจุดเสี่ยง 5 บริเวณ · บ่าย: สำรวจบ้านด้วย Home Safety Checklist"},
+{m:"มีนาคม 2570",n:21,d:"พุธ 24 มี.ค. 70",t:"4",title:"สภ 401 (2 ชม.) + สภ 403 PM2.5 (2 ชม.)",sub:"เช้า: ปฏิบัติติดตั้งราวจับและแผ่นกันลื่นในบ้านตัวอย่าง · บ่าย: สถานการณ์หมอกควันและการอ่านค่าคุณภาพอากาศ"},
+{m:"มีนาคม 2570",n:22,d:"พุธ 31 มี.ค. 70",t:"4",title:"สภ 403 (2 ชม.) + สภ 404 ฉุกเฉิน (2 ชม.)",sub:"เช้า: จัดห้องปลอดฝุ่นในวัด ฝึกสวมหน้ากากให้แนบสนิท · บ่าย: ปฐมพยาบาลเบื้องต้นและการแจ้งเหตุ 1669"},
+{m:"เมษายน 2570",n:23,d:"พุธ 7 เม.ย. 70",t:"4",title:"สภ 404 (2 ชม.) + สภ 402 สิ่งแวดล้อม (2 ชม.)",sub:"เช้า: ฝึก CPR กับหุ่นจำลองและซ้อมแผนอพยพ · บ่าย: การคัดแยกขยะและตั้งจุดรับขยะรีไซเคิลที่วัด"},
+{m:"เมษายน 2570",n:0,d:"พุธ 14 เม.ย. 70",t:"br",title:"หยุดเทศกาลปี๋ใหม่เมือง",sub:"ไม่มีการเรียนการสอน · จัดกิจกรรมรดน้ำดำหัวผู้สูงอายุร่วมกับชุมชนนอกตารางเรียน"},
+{m:"เมษายน 2570",n:24,d:"พุธ 21 เม.ย. 70",t:"4",title:"สภ 402 สิ่งแวดล้อมชุมชน (4 ชม.)",sub:"เช้า: ป่าชุมชนและการอนุรักษ์ต้นน้ำแจ้ซ้อน · บ่าย: ทำถังหมักปุ๋ยและปลูกต้นไม้ร่วมกับอุทยานฯ · จบมิติที่ 4 (20 ชม.)"},
+{m:"เมษายน 2570",n:25,d:"พุธ 28 เม.ย. 70",t:"3",title:"ศก 301 บัญชีครัวเรือนและการออม ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ความสำคัญของการรู้รายรับรายจ่าย · บ่าย: ปฏิบัติทำบัญชีครัวเรือนและวางเป้าหมายลดรายจ่าย"},
+{m:"พฤษภาคม 2570",n:26,d:"พุธ 5 พ.ค. 70",t:"3",title:"ศก 301 (2 ชม.) + ศก 305 รู้ทันภัยการเงิน (2 ชม.)",sub:"เช้า: การออมในระบบ กอช. และกองทุนสวัสดิการชุมชน · บ่าย: แก๊งคอลเซ็นเตอร์ หนี้นอกระบบ และการทำพินัยกรรม"},
+{m:"พฤษภาคม 2570",n:27,d:"พุธ 12 พ.ค. 70",t:"3",title:"ศก 302 เกษตรปลอดภัยหลังบ้าน ครั้งที่ 1 (4 ชม.)",sub:"เช้า: เกษตรอินทรีย์และการออกแบบแปลงยกแคร่ · บ่าย: ปฏิบัติสร้างแปลงผักยกแคร่สาธิตในบริเวณวัด"},
+{m:"พฤษภาคม 2570",n:0,d:"พุธ 19 พ.ค. 70",t:"br",title:"หยุดช่วงวันสำคัญทางศาสนาและเตรียมฤดูเพาะปลูก",sub:"ไม่มีการเรียนการสอน (ให้คณะกรรมการตรวจสอบวันวิสาขบูชาตามประกาศทางการ)"},
+{m:"พฤษภาคม 2570",n:28,d:"พุธ 26 พ.ค. 70",t:"3",title:"ศก 302 เกษตรปลอดภัยหลังบ้าน ครั้งที่ 2 (4 ชม.)",sub:"เช้า: การทำปุ๋ยหมักและน้ำหมักชีวภาพ · บ่าย: เพาะเห็ดนางฟ้า แจกเมล็ดพันธุ์และต้นกล้ากลับบ้าน"},
+{m:"มิถุนายน 2570",n:29,d:"พุธ 2 มิ.ย. 70",t:"3",title:"ศก 303 อาชีพเสริมสร้างรายได้ ครั้งที่ 1 (4 ชม.)",sub:"เช้า: วิเคราะห์ทุนและโอกาสจากการท่องเที่ยวของตำบล · บ่าย: ปฏิบัติแปรรูปสมุนไพรและอาหารพื้นบ้าน"},
+{m:"มิถุนายน 2570",n:30,d:"พุธ 9 มิ.ย. 70",t:"3",title:"ศก 303 อาชีพเสริมสร้างรายได้ ครั้งที่ 2 (4 ชม.)",sub:"เช้า: ต้นทุน ราคาขาย และบรรจุภัณฑ์ · บ่าย: จัดตลาดนัดผลิตภัณฑ์ผู้สูงอายุที่ลานวัด และตั้งกลุ่มอาชีพ 3 กลุ่ม"},
+{m:"มิถุนายน 2570",n:31,d:"พุธ 16 มิ.ย. 70",t:"3",title:"ศก 304 สิทธิและสวัสดิการที่พึงได้รับ (4 ชม.)",sub:"เช้า: เบี้ยยังชีพ บัตรทอง บัตรคนพิการ กองทุนผู้สูงอายุ · บ่าย: คลินิกตรวจสอบสิทธิรายบุคคลโดย พมจ. · จบมิติที่ 3 (28 ชม.)"},
+{m:"มิถุนายน 2570",n:0,d:"พุธ 23 มิ.ย. 70",t:"br",title:"หยุดช่วงฤดูทำนาและดำนา",sub:"ไม่มีการเรียนการสอน · ส่งคลิปทบทวนบทเรียนทางกลุ่ม LINE"},
+{m:"มิถุนายน 2570",n:32,d:"พุธ 30 มิ.ย. 70",t:"5",title:"ทน 501 สมาร์ตโฟนฉบับผู้สูงวัย ครั้งที่ 1 (4 ชม.)",sub:"เช้า: ตั้งค่าเครื่องให้เหมาะกับผู้สูงอายุ โทรออกรับสาย · บ่าย: ใช้งาน LINE และวิดีโอคอล จับคู่กับเยาวชนอาสา"},
+{m:"กรกฎาคม 2570",n:33,d:"พุธ 7 ก.ค. 70",t:"5",title:"ทน 501 (2 ชม.) + ทน 504 นวัตกรรม (2 ชม.)",sub:"เช้า: ถ่ายภาพ ค้นหาข้อมูล และสั่งงานด้วยเสียง · บ่าย: ฐานทดลองกายอุปกรณ์และประดิษฐ์นวัตกรรมต้นทุนต่ำ"},
+{m:"กรกฎาคม 2570",n:34,d:"พุธ 14 ก.ค. 70",t:"5",title:"ทน 502 บริการภาครัฐและบริการดิจิทัล (4 ชม.)",sub:"เช้า: แอปพลิเคชันภาครัฐและการตรวจสอบสิทธิ · บ่าย: ปฏิบัติติดตั้งใช้งานจริง ตั้งรหัสผ่านปลอดภัย"},
+{m:"กรกฎาคม 2570",n:35,d:"พุธ 21 ก.ค. 70",t:"5",title:"ทน 503 รู้เท่าทันข่าวลวงและภัยออนไลน์ (4 ชม.)",sub:"เช้า: กิจกรรมจริงหรือลวง วิเคราะห์ข่าวจากกลุ่ม LINE จริง · บ่าย: บทบาทสมมติรับสายมิจฉาชีพ จัดทำป้ายเตือนภัย · จบมิติที่ 5 (16 ชม.)"},
+{m:"กรกฎาคม 2570",n:36,d:"พุธ 28 ก.ค. 70",t:"sp",title:"ปัจฉิมนิเทศและพิธีมอบวุฒิบัตร",sub:"ประเมิน AAI ครั้งที่ 2 ครบทุกด้าน · นำเสนอโครงงานชุมชนรายกลุ่ม · การแสดงประจำรุ่น · มอบวุฒิบัตรและเชิดชูเกียรติผู้สูงวัยพฤฒพลังดีเด่น · ขึ้นทะเบียนแกนนำพฤฒพลังตำบล"}];
+
+const DEF_COMM=[
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ครูใหญ่",name:"นายวรวิทย์ ศิริบุญธรรม",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ควบคุมดูแลการเรียนการสอนและบริหารโรงเรียนภาพรวม"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยครูใหญ่และวิชาการ",name:"นางสะอาด ขาวสะอาด",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยบริหารงานวิชาการและกิจกรรมการเรียนการสอน"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยครูใหญ่และเลขานุการ",name:"นางทักษิณา วรรณารักษ์",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"งานเลขานุการและประสานงานทั่วไป"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"เหรัญญิก",name:"นางคำวัง หวานแหลม",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ดูแลการเงินและบัญชีกองทุนโรงเรียน"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยเหรัญญิก",name:"นางหวัน อภิรักษ์วงศ์, นางอำไพ เคหะลูน",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยดูแลงานการเงินและบัญชี"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"เงินนอกงบประมาณ",name:"นางเรือนมูล ดวงส่งเสริม",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ดูแลและบริหารจัดการเงินนอกงบประมาณ"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"อาคารสถานที่",name:"นางบัวชอน กระจาย",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ดูแลความเรียบร้อยของสถานที่เรียน"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยอาคารสถานที่",name:"นางทองใบ วามือ, นางบัวไทย หวานแหลม",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยดูแลความเรียบร้อยสถานที่"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ประชาสัมพันธ์",name:"นางทองรัก ดีโต",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ประชาสัมพันธ์ข่าวสารและกิจกรรม"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยประชาสัมพันธ์",name:"นางคำสุข สุจริต",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยงานประชาสัมพันธ์"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ปฏิคม",name:"นางคำมวล เจริญพงษ์ศิลป์",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ต้อนรับผู้มาเยือนและดูแลความสะดวก"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยปฏิคม",name:"นางปั่น รักบุตร",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยงานปฏิคม"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"บันทึกภาพ",name:"นางนิศากร เตวิชัย",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"บันทึกภาพกิจกรรมและจัดทำสื่อภาพถ่าย"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยบันทึกภาพ",name:"นางมาลี มักได้",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยบันทึกภาพกิจกรรม"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ฝ่ายวัฒนธรรม",name:"นายพรัญชัย มักได้",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ส่งเสริมและสืบสานงานวัฒนธรรมและประเพณี"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยวัฒนธรรม",name:"นายศรีเมือง ยังไวย์",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยงานวัฒนธรรมและประเพณี"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"แสงเสียง",name:"ร.อ.บุญมี โพธิ",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ดูแลระบบเครื่องเสียงและโสตทัศนูปกรณ์"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ผู้ช่วยแสงเสียง",name:"นายปุ๊ด กำลังว่อง",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยดูแลระบบเครื่องเสียง"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"วิชาการ",name:"นางอุไร ฟูคำสาย",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"สนับสนุนและดำเนินงานด้านวิชาการ"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"ประธานนักเรียน",name:"นายประมูล หวานแหลม",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"เป็นผู้แทนนักเรียนในการประสานงาน"},
+{grp:"1. คณะกรรมการบริหารโรงเรียนและฝ่ายงานต่างๆ",pos:"รองประธานนักเรียน",name:"นางดวงสุรีย์ มักได้",org:"โรงเรียนผู้สูงอายุตำบลแจ้ซ้อน",role:"ช่วยงานประธานนักเรียน"},
+
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"พระเสาร์คำ ธรรมะนันโท (เจ้าอาวาส)",org:"วัดศรีหลวงแจ้ซ้อน",role:"ให้คำปรึกษาด้านธรรมะ สถาน และจิตใจ"},
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายบุญมา ไชยเมืองชื่น",org:"องค์การบริหารส่วนตำบลแจ้ซ้อน",role:"นายกองค์การบริหารส่วนตำบลแจ้ซ้อน / ที่ปรึกษาบริหาร"},
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายสุทธิพล ต๊ะเวที",org:"ฝ่ายปกครองตำบลแจ้ซ้อน",role:"กำนันตำบลแจ้ซ้อน / ที่ปรึกษาด้านความมั่นคงและชุมชน"},
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายยุทธ เตวิชัย",org:"หมู่ที่ 5 ตำบลแจ้ซ้อน",role:"ผู้ใหญ่บ้านหมู่ที่ 5 / ที่ปรึกษาประสานงานพื้นที่"},
+{grp:"2. คณะที่ปรึกษาโรงเรียน",pos:"ที่ปรึกษา",name:"นายชาติ อภิรักษ์วงศ์",org:"หมู่ที่ 12 ตำบลแจ้ซ้อน",role:"ผู้ใหญ่บ้านหมู่ที่ 12 / ที่ปรึกษาประสานงานพื้นที่"}];
+
+const DEFAULT={courses:DEF_COURSES,cal:DEF_CAL,comm:DEF_COMM,blocks:{}};
+let DB,EDIT=false,FORM=null;
+
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){
+  try{const s=localStorage.getItem(KEY);if(s)return Object.assign(clone(DEFAULT),JSON.parse(s));}catch(e){}
+  try{const p=JSON.parse(document.getElementById('preload').textContent);if(p)return Object.assign(clone(DEFAULT),p);}catch(e){}
+  return clone(DEFAULT);
+}
+function save(msg){localStorage.setItem(KEY,JSON.stringify(DB));if(msg!==false)toast(msg||'บันทึกเรียบร้อย');}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1800);}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+/* ---- render ---- */
+function tools(type,i){
+  return `<span class="tools">
+    <button onclick="event.stopPropagation();move('${type}',${i},-1)" title="ย้ายขึ้น">▲</button>
+    <button onclick="event.stopPropagation();move('${type}',${i},1)" title="ย้ายลง">▼</button>
+    <button onclick="event.stopPropagation();openForm('${type}',${i})">แก้ไข</button>
+    <button onclick="event.stopPropagation();del('${type}',${i})">ลบ</button></span>`;
+}
+function renderCourses(){
+  let h='';
+  [1,2,3,4,5].forEach(k=>{
+    const d=DIM[k],list=DB.courses.map((c,i)=>({c,i})).filter(x=>+x.c.d===k);
+    const sum=list.reduce((a,x)=>a+(+x.c.h||0),0);
+    h+=`<h3 class="title"><span class="pill ${d.c}">${sum} ชม.</span> ${d.n}</h3>`;
+    list.forEach(({c,i})=>{
+      h+=`<div class="acc"><div class="acc-h" onclick="this.parentNode.classList.toggle('open')">
+        <span class="ar">▶</span><span class="code">${esc(c.code)}</span>
+        <span class="nm">${esc(c.name)}</span><span class="hr">${c.h} ชม.</span>${tools('course',i)}</div>
+        <div class="acc-b">
+          <div class="lbl">วัตถุประสงค์</div><p>${esc(c.obj)}</p>
+          <div class="lbl">เนื้อหาการสอน</div><ol>${(c.topics||[]).map(t=>`<li>${esc(t)}</li>`).join('')}</ol>
+          <div class="lbl">กิจกรรมการเรียนรู้</div><ul>${(c.act||[]).map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
+          <div class="lbl">สื่อและอุปกรณ์</div><p>${esc(c.media)}</p>
+          <div class="lbl">ผู้รับผิดชอบ / วิทยากร</div><p>${esc(c.sp)}</p>
+          <div class="aai"><b>เชื่อมโยงตัวชี้วัด AAI:</b> ${esc(c.aai)}</div>
+        </div></div>`;
+    });
+  });
+  document.getElementById('courseList').innerHTML=h;
+}
+function renderCal(){
+  let h='',last='';
+  DB.cal.forEach((it,i)=>{
+    if(it.m!==last){h+=`<div class="cal-month">${esc(it.m)}</div>`;last=it.m;}
+    const cls=it.t==='br'?'break':(it.t==='sp'?'sp':'');
+    const no=it.t==='br'?'หยุด':'ครั้งที่<br>'+it.n;
+    const pill=['1','2','3','4','5'].includes(String(it.t))?`<span class="pill d${it.t}">มิติ ${it.t}</span> `:(it.t==='sp'?`<span class="pill d0">กิจกรรมพิเศษ</span> `:'');
+    h+=`<div class="sess ${cls}"><div class="no">${no}</div><div class="dt">${esc(it.d)}</div>
+      <div class="ct"><b>${pill}${esc(it.title)}</b><small>${esc(it.sub)}</small></div>${tools('cal',i)}</div>`;
+  });
+  document.getElementById('calList').innerHTML=h;
+}
+function renderComm(){
+  let h='',last='';
+  DB.comm.forEach((m,i)=>{
+    if(m.grp!==last){
+      if(last!=='')h+='</table>';
+      h+=`<h3 class="title">${esc(m.grp)}</h3><table><tr><th style="width:25%">ตำแหน่ง</th><th style="width:30%">ชื่อ / ผู้ดำรงตำแหน่ง</th><th style="width:20%">สังกัด</th><th>บทบาทหน้าที่</th><th style="width:1%"></th></tr>`;
+      last=m.grp;
+    }
+    h+=`<tr><td><b>${esc(m.pos)}</b></td><td>${esc(m.name)}</td><td>${esc(m.org)}</td><td>${esc(m.role)}</td><td>${tools('comm',i)}</td></tr>`;
+  });
+  if(last!=='')h+='</table>';
+  document.getElementById('commList').innerHTML=h;
+}
+function applyBlocks(){
+  document.querySelectorAll('[data-edit]').forEach(el=>{
+    const k=el.dataset.edit;
+    if(DB.blocks[k]!==undefined)el.innerHTML=DB.blocks[k];
+    if(!el.dataset.bound){
+      el.addEventListener('blur',()=>{if(EDIT){DB.blocks[k]=el.innerHTML;save(false);document.getElementById('st').textContent='บันทึกแล้ว '+new Date().toLocaleTimeString('th-TH');}});
+      el.dataset.bound='1';
+    }
+  });
+}
+function renderAll(){renderCourses();renderCal();renderComm();applyBlocks();}
+
+/* ---- CRUD ---- */
+const SCHEMA={
+ course:{t:'รายวิชา',f:[
+  {k:'d',l:'มิติ',type:'select',opt:[['1','มิติ 1 สุขภาพ'],['2','มิติ 2 สังคม จิตใจ ภูมิปัญญา'],['3','มิติ 3 เศรษฐกิจและความมั่นคง'],['4','มิติ 4 สภาพแวดล้อมและความปลอดภัย'],['5','มิติ 5 เทคโนโลยีและนวัตกรรม']]},
+  {k:'code',l:'รหัสวิชา'},{k:'name',l:'ชื่อวิชา'},{k:'h',l:'จำนวนชั่วโมง',type:'number'},
+  {k:'obj',l:'วัตถุประสงค์',type:'ta'},
+  {k:'topics',l:'เนื้อหาการสอน',type:'lines',hint:'พิมพ์หัวข้อละ 1 บรรทัด'},
+  {k:'act',l:'กิจกรรมการเรียนรู้',type:'lines',hint:'พิมพ์กิจกรรมละ 1 บรรทัด'},
+  {k:'media',l:'สื่อและอุปกรณ์'},{k:'sp',l:'ผู้รับผิดชอบ / วิทยากร'},{k:'aai',l:'ตัวชี้วัด AAI ที่เชื่อมโยง',type:'ta'}]},
+ cal:{t:'ครั้งเรียน / วันหยุด',f:[
+  {k:'m',l:'เดือน (หัวข้อกลุ่ม)',hint:'เช่น ตุลาคม 2569 — ใช้ข้อความเดียวกันเพื่อจัดอยู่กลุ่มเดียวกัน'},
+  {k:'n',l:'ครั้งที่',type:'number',hint:'ใส่ 0 สำหรับวันหยุด'},
+  {k:'d',l:'วันที่',hint:'เช่น พุธ 21 ต.ค. 69'},
+  {k:'t',l:'ประเภท',type:'select',opt:[['1','มิติ 1 สุขภาพ'],['2','มิติ 2 สังคม'],['3','มิติ 3 เศรษฐกิจ'],['4','มิติ 4 สภาพแวดล้อม'],['5','มิติ 5 เทคโนโลยี'],['sp','กิจกรรมพิเศษ'],['br','วันหยุด']]},
+  {k:'title',l:'หัวข้อ'},{k:'sub',l:'รายละเอียด',type:'ta'}]},
+ comm:{t:'รายชื่อกรรมการ',f:[
+  {k:'grp',l:'กลุ่ม/คณะ',hint:'ใช้ชื่อกลุ่มเดียวกันเพื่อจัดอยู่ตารางเดียวกัน'},
+  {k:'pos',l:'ตำแหน่ง'},{k:'name',l:'ชื่อ / ผู้ดำรงตำแหน่ง'},{k:'org',l:'สังกัด'},{k:'role',l:'บทบาทหน้าที่',type:'ta'}]}
+};
+function arrOf(t){return t==='course'?DB.courses:(t==='cal'?DB.cal:DB.comm)}
+function openForm(t,i){
+  FORM={t,i};const s=SCHEMA[t],a=arrOf(t),o=i>=0?a[i]:{};
+  document.getElementById('mtitle').textContent=(i<0?'เพิ่ม':'แก้ไข')+s.t;
+  document.getElementById('mfields').innerHTML=s.f.map(f=>{
+    let v=o[f.k]!==undefined?o[f.k]:'';
+    if(f.type==='lines')v=(v||[]).join('\n');
+    let inp;
+    if(f.type==='select')inp=`<select id="f_${f.k}">${f.opt.map(([val,lab])=>`<option value="${val}"${String(v)===val?' selected':''}>${lab}</option>`).join('')}</select>`;
+    else if(f.type==='ta'||f.type==='lines')inp=`<textarea id="f_${f.k}">${esc(String(v))}</textarea>`;
+    else inp=`<input id="f_${f.k}" type="${f.type==='number'?'number':'text'}" value="${esc(String(v))}">`;
+    return `<div class="fld"><label>${f.l}</label>${inp}${f.hint?`<small>${f.hint}</small>`:''}</div>`;
+  }).join('');
+  document.getElementById('modal').classList.add('on');
+}
+function closeForm(){document.getElementById('modal').classList.remove('on');FORM=null;}
+function submitForm(){
+  const {t,i}=FORM,s=SCHEMA[t],a=arrOf(t),o={};
+  s.f.forEach(f=>{let v=document.getElementById('f_'+f.k).value;
+    if(f.type==='lines')v=v.split('\n').map(x=>x.trim()).filter(Boolean);
+    if(f.type==='number')v=Number(v)||0;
+    o[f.k]=v;});
+  if(i<0)a.push(o);else a[i]=o;
+  save();renderAll();closeForm();
+}
+function del(t,i){if(!confirm('ยืนยันการลบรายการนี้?'))return;arrOf(t).splice(i,1);save('ลบแล้ว');renderAll();}
+function move(t,i,dir){const a=arrOf(t),j=i+dir;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];save(false);renderAll();}
+
+/* ---- toolbar ---- */
+function toggleEdit(on){
+  EDIT=on===undefined?!EDIT:on;
+  document.body.classList.toggle('edit',EDIT);
+  document.querySelectorAll('[data-edit]').forEach(el=>el.contentEditable=EDIT?'true':'false');
+  const b=document.getElementById('tgl');
+  b.textContent=EDIT?'✔ กำลังแก้ไข — คลิกเพื่อปิด':'✎ เปิดโหมดแก้ไข';
+  b.classList.toggle('live',EDIT);
+  document.getElementById('st').textContent=EDIT?'คลิกที่ข้อความกรอบเส้นประเพื่อพิมพ์แก้ไขได้เลย':'';
+}
+function expJSON(){dl('ข้อมูลโรงเรียนผู้สูงอายุแจ้ซ้อน.json',JSON.stringify(DB,null,1),'application/json');}
+function dlHTML(){
+  const was=EDIT;if(was)toggleEdit(false);
+  const pre=document.getElementById('preload');pre.textContent=JSON.stringify(DB);
+  dl('index.html','<!DOCTYPE html>\n'+document.documentElement.outerHTML,'text/html');
+  pre.textContent='null';if(was)toggleEdit(true);
+}
+function dl(name,txt,type){
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click();
+  toast('ดาวน์โหลดแล้ว');
+}
+function resetAll(){if(!confirm('คืนค่าเริ่มต้นทั้งหมด? ข้อมูลที่แก้ไขไว้จะหายไป'))return;localStorage.removeItem(KEY);DB=clone(DEFAULT);renderAll();toast('คืนค่าเริ่มต้นแล้ว');}
+document.getElementById('file').addEventListener('change',e=>{
+  const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{DB=Object.assign(clone(DEFAULT),JSON.parse(r.result));save('กู้คืนข้อมูลแล้ว');renderAll();}catch(x){alert('ไฟล์ไม่ถูกต้อง');}};
+  r.readAsText(f);e.target.value='';
+});
+document.getElementById('tgl').onclick=()=>toggleEdit();
+document.querySelectorAll('nav button').forEach(b=>{
+  b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('section').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});};
+});
+DB=load();renderAll();
+</script>
+</body>
+</html>
